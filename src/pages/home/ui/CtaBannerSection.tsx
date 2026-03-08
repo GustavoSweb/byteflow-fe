@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-export default function CTA() {
+export default function CtaBannerSection() {
   return (
     <section className="bg-white py-24 px-6 md:px-[60px] flex justify-center">
       <div className="w-full max-w-[1200px] bg-[#0d0d0d] rounded-[40px] p-12 md:p-24 flex flex-col items-center gap-10 text-center relative overflow-hidden">

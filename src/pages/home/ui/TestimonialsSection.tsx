@@ -35,7 +35,7 @@ const TESTIMONIALS = [
   },
 ];
 
-export default function Testimonials() {
+export default function TestimonialsSection() {
   return (
     <section className="bg-white py-24 px-6 md:px-[60px] flex justify-center">
       <div className="w-full max-w-[1200px] flex flex-col gap-[52px]">

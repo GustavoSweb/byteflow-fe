@@ -1,6 +1,6 @@
 "use client";
 
-export default function About() {
+export default function BenefitsSection() {
   return (
     <section className="bg-white px-[60px] py-[152px] relative flex items-center justify-center overflow-hidden w-full md:px-[20px] md:py-[100px]">
       {/* Blurred background element */}

@@ -2,7 +2,7 @@
 
 import { Send } from "lucide-react";
 
-export default function Footer() {
+export const Footer = () => {
   return (
     <footer className="bg-white pt-24 pb-8 px-6 md:px-[60px] flex justify-center border-t border-[#0d0d0d]/5">
       <div className="w-full max-w-[1200px] flex flex-col gap-20">
@@ -30,7 +30,8 @@ export default function Footer() {
               <div className="flex flex-col gap-3">
                 <h4 className="text-[18px] font-bold text-[#0d0d0d]">Stay Connected & Informed</h4>
                 <p className="text-[15px] leading-[1.6] text-[#0d0d0d]/60 font-medium">
-                  Subscribe to our newsletter for the marketing insights, trends, & growth strategies to scale your business.
+                  Subscribe to our newsletter for the marketing insights, trends, & growth
+                  strategies to scale your business.
                 </p>
               </div>
               <form className="flex gap-2 p-1 bg-[#f5f5f5] rounded-full border border-[#0d0d0d]/5">
@@ -54,17 +55,59 @@ export default function Footer() {
             <div className="flex flex-col gap-6">
               <h5 className="text-[16px] font-bold text-[#0d0d0d]">Sections</h5>
               <ul className="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#services" className="text-[15px] text-[#0d0d0d]/60 font-medium hover:text-[#0d0d0d] transition-colors">Services</a></li>
-                <li><a href="#work" className="text-[15px] text-[#0d0d0d]/60 font-medium hover:text-[#0d0d0d] transition-colors">Work</a></li>
-                <li><a href="#testimonials" className="text-[15px] text-[#0d0d0d]/60 font-medium hover:text-[#0d0d0d] transition-colors">Testimonials</a></li>
+                <li>
+                  <a
+                    href="#services"
+                    className="text-[15px] text-[#0d0d0d]/60 font-medium hover:text-[#0d0d0d] transition-colors"
+                  >
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#work"
+                    className="text-[15px] text-[#0d0d0d]/60 font-medium hover:text-[#0d0d0d] transition-colors"
+                  >
+                    Work
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#testimonials"
+                    className="text-[15px] text-[#0d0d0d]/60 font-medium hover:text-[#0d0d0d] transition-colors"
+                  >
+                    Testimonials
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="flex flex-col gap-6">
               <h5 className="text-[16px] font-bold text-[#0d0d0d]">Information</h5>
               <ul className="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#faq" className="text-[15px] text-[#0d0d0d]/60 font-medium hover:text-[#0d0d0d] transition-colors">FAQ&apos;s</a></li>
-                <li><a href="/404" className="text-[15px] text-[#0d0d0d]/60 font-medium hover:text-[#0d0d0d] transition-colors">404</a></li>
-                <li><a href="#contact" className="text-[15px] text-[#0d0d0d]/60 font-medium hover:text-[#0d0d0d] transition-colors">Contact</a></li>
+                <li>
+                  <a
+                    href="#faq"
+                    className="text-[15px] text-[#0d0d0d]/60 font-medium hover:text-[#0d0d0d] transition-colors"
+                  >
+                    FAQ&apos;s
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/404"
+                    className="text-[15px] text-[#0d0d0d]/60 font-medium hover:text-[#0d0d0d] transition-colors"
+                  >
+                    404
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="text-[15px] text-[#0d0d0d]/60 font-medium hover:text-[#0d0d0d] transition-colors"
+                  >
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -75,11 +118,9 @@ export default function Footer() {
           <p className="text-[14px] text-[#0d0d0d]/40 font-medium">
             Copyright © 2024 – All Right Reserved
           </p>
-          <p className="text-[14px] text-[#0d0d0d]/40 font-medium">
-            Created by Khurram
-          </p>
+          <p className="text-[14px] text-[#0d0d0d]/40 font-medium">Created by Khurram</p>
         </div>
       </div>
     </footer>
   );
-}
+};

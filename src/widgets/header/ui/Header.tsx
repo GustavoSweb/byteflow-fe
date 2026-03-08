@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Blog", href: "#blog" },
 ];
 
-export default function Header() {
+export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -38,25 +38,39 @@ export default function Header() {
               </clipPath>
             </defs>
           </svg>
-          <span className="text-white/75 font-bold text-[21px] leading-[1.46] md:text-[18px]">Upreach</span>
+          <span className="text-white/75 font-bold text-[21px] leading-[1.46] md:text-[18px]">
+            Upreach
+          </span>
         </a>
 
-        <nav className={`
+        <nav
+          className={`
           flex items-center gap-[44px]
           md:absolute md:top-full md:left-0 md:right-0 md:bg-dark md:flex-col md:items-start md:gap-0 md:overflow-hidden md:transition-all md:duration-300 md:px-[20px] md:z-[100]
           ${menuOpen ? "md:max-h-[400px] md:py-[16px] md:pb-[24px] md:gap-[20px]" : "md:max-h-0 md:py-0"}
-        `}>
+        `}
+        >
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className="text-white/75 text-[14px] font-normal leading-[25.6px] no-underline whitespace-nowrap transition-colors duration-200 hover:text-white">
+            <a
+              key={link.label}
+              href={link.href}
+              className="text-white/75 text-[14px] font-normal leading-[25.6px] no-underline whitespace-nowrap transition-colors duration-200 hover:text-white"
+            >
               {link.label}
             </a>
           ))}
-          <a href="#contact" className="hidden md:inline-flex items-center justify-center py-[9px] pb-[10px] px-[28px] rounded-full bg-primary text-[#0d0d0d] text-[17px] font-medium leading-[25.2px] no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-hover mt-[4px]">
+          <a
+            href="#contact"
+            className="hidden md:inline-flex items-center justify-center py-[9px] pb-[10px] px-[28px] rounded-full bg-primary text-[#0d0d0d] text-[17px] font-medium leading-[25.2px] no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-hover mt-[4px]"
+          >
             Contact us
           </a>
         </nav>
 
-        <a href="#contact" className="inline-flex items-center justify-center py-[9px] pb-[10px] px-[28px] rounded-full bg-primary text-[#0d0d0d] text-[17px] font-medium leading-[25.2px] no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-hover shrink-0 md:hidden">
+        <a
+          href="#contact"
+          className="inline-flex items-center justify-center py-[9px] pb-[10px] px-[28px] rounded-full bg-primary text-[#0d0d0d] text-[17px] font-medium leading-[25.2px] no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-hover shrink-0 md:hidden"
+        >
           Contact us
         </a>
 
@@ -65,11 +79,17 @@ export default function Header() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
-          <span className={`block w-[24px] h-[2px] bg-white/75 rounded-sm transition-all duration-300 ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`} />
-          <span className={`block w-[24px] h-[2px] bg-white/75 rounded-sm transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-[24px] h-[2px] bg-white/75 rounded-sm transition-all duration-300 ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`} />
+          <span
+            className={`block w-[24px] h-[2px] bg-white/75 rounded-sm transition-all duration-300 ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`}
+          />
+          <span
+            className={`block w-[24px] h-[2px] bg-white/75 rounded-sm transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+          />
+          <span
+            className={`block w-[24px] h-[2px] bg-white/75 rounded-sm transition-all duration-300 ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
+          />
         </button>
       </div>
     </header>
   );
-}
+};

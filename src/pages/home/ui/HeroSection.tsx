@@ -17,7 +17,7 @@ import iconArrowUp from "@/assets/icon-arrow-up.svg";
 
 const BRAND_LOGOS = [logo1, logo2, logo1, logo2, logo1, logo2];
 
-export default function Hero() {
+export default function HeroSection() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-[#002329] flex items-center justify-center px-6 py-24 md:px-[60px] md:py-[152px]">
       <div

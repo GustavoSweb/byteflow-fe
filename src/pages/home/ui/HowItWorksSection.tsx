@@ -48,7 +48,7 @@ const SERVICES = [
   },
 ];
 
-export default function Services() {
+export default function HowItWorksSection() {
   return (
     <section className="bg-white py-24 px-6 md:px-[60px] flex justify-center">
       <div className="w-full max-w-[1200px] flex flex-col items-center gap-[52px]">
