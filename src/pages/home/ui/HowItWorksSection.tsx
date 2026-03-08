@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { 
   Megaphone, 
   Briefcase, 
@@ -10,54 +11,26 @@ import {
 } from "lucide-react";
 
 const SERVICES = [
-  {
-    icon: Megaphone,
-    title: "Digital Marketing",
-    description:
-      "Maximize online visibility with paid ads, social media, and strategic SEO to drive targeted traffic and higher conversions.",
-  },
-  {
-    icon: Briefcase,
-    title: "Business Consulting",
-    description:
-      "Enhance business strategy, optimize core processes, and leverage real-time analytics for sustainable growth.",
-  },
-  {
-    icon: UserPlus,
-    title: "Lead Generation",
-    description:
-      "Optimize advanced funnels, automate processes, and boost customer conversions to generate leads.",
-  },
-  {
-    icon: Target,
-    title: "Brand Strategy",
-    description:
-      "Building a powerful, data-driven brand identity that resonates, inspires, and drives long-term success.",
-  },
-  {
-    icon: PenTool,
-    title: "Content Writing",
-    description:
-      "Crafting compelling, SEO-optimized content that boosts engagement, authority, and conversions.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Strategic Planning",
-    description:
-      "Generate high-quality leads through targeted campaigns and optimized funnels for maximum conversions.",
-  },
+  { icon: Megaphone, key: "digitalMarketing" },
+  { icon: Briefcase, key: "businessConsulting" },
+  { icon: UserPlus, key: "leadGeneration" },
+  { icon: Target, key: "brandStrategy" },
+  { icon: PenTool, key: "contentWriting" },
+  { icon: TrendingUp, key: "strategicPlanning" },
 ];
 
 export default function HowItWorksSection() {
+  const t = useTranslations("HomePage.HowItWorks");
+
   return (
     <section className="bg-white py-24 px-6 md:px-[60px] flex justify-center">
       <div className="w-full max-w-[1200px] flex flex-col items-center gap-[52px]">
         <div className="flex flex-col items-center gap-[15px] text-center max-w-[600px]">
           <h2 className="text-[clamp(32px,5vw,41.9px)] font-bold text-[#0d0d0d] tracking-tight leading-[1.25]">
-            What we offer
+            {t("title")}
           </h2>
           <p className="text-[16.6px] leading-[1.5] text-[#0d0d0d]/70 font-medium">
-            Comprehensive solutions for business success.
+            {t("subtitle")}
           </p>
         </div>
 
@@ -72,10 +45,10 @@ export default function HowItWorksSection() {
               </div>
               <div className="flex flex-col gap-[11.4px]">
                 <h3 className="text-[20.6px] font-medium text-[#0d0d0d] leading-[1.5]">
-                  {service.title}
+                  {t(`services.${service.key}.title`)}
                 </h3>
                 <p className="text-[15.3px] leading-[1.46] text-[#0d0d0d]/70 font-medium max-w-[310px]">
-                  {service.description}
+                  {t(`services.${service.key}.description`)}
                 </p>
               </div>
             </div>

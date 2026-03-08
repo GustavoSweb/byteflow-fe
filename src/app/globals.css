@@ -3,24 +3,24 @@
 @source "../**/*.{ts,tsx}";
 
 @theme {
-  --font-inter: "Inter", sans-serif;
-  --breakpoint-lg: 1100px;
-  
-  --color-primary: #50c878;
-  --color-primary-hover: #3db862;
-  --color-primary-dark: #33824d;
-  --color-dark: #002329;
+    --font-inter: "Inter", sans-serif;
+    --breakpoint-lg: 1100px;
+
+    --color-primary: #50c878;
+    --color-primary-hover: #3db862;
+    --color-primary-dark: #33824d;
+    --color-dark: #002329;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter);
-  margin: 0;
-  padding: 0;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter);
+    margin: 0;
+    padding: 0;
 }

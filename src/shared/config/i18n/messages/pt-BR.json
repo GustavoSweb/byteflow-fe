@@ -1,0 +1,166 @@
+{
+  "HomePage": {
+    "title": "Bem-vindo ao Byteflow",
+    "subtitle": "Sua plataforma de digitalização",
+    "Hero": {
+      "title": "Cresça seu negócio, domine cada movimento.",
+      "subtitle": "Auxiliando empresas a prosperar com estratégias digitais inovadoras, soluções criativas e resultados mensuráveis.",
+      "bookCall": "Agendar ligação",
+      "learnMore": "Saiba mais",
+      "successStories": "2k+ Histórias de Sucesso",
+      "growthMission": "Seu Crescimento, Nossa Missão",
+      "roiBoost": "Aumento de ROI"
+    },
+    "Benefits": {
+      "title": "Na Upreach, entregamos resultados reais através de estratégias de marketing de alta conversão projetadas para escalar seu negócio, atraer o público certo e maximizar o ROI com precisão."
+    },
+    "HowItWorks": {
+      "title": "O que oferecemos",
+      "subtitle": "Soluções completas para o sucesso do seu negócio.",
+      "services": {
+        "digitalMarketing": {
+          "title": "Marketing Digital",
+          "description": "Maximize a visibilidade online com anúncios pagos, mídias sociais e SEO estratégico para gerar tráfego segmentado e maiores conversões."
+        },
+        "businessConsulting": {
+          "title": "Consultoria Empresarial",
+          "description": "Melhore a estratégia de negócios, otimize processos principais e utilize análises em tempo real para crescimento sustentável."
+        },
+        "leadGeneration": {
+          "title": "Geração de Leads",
+          "description": "Otimize funis avançados, automatize processos e impulsione conversões de clientes para gerar leads."
+        },
+        "brandStrategy": {
+          "title": "Estratégia de Marca",
+          "description": "Construindo uma identidade de marca poderosa e orientada por dados que ressoa, inspira e impulsiona o sucesso a longo prazo."
+        },
+        "contentWriting": {
+          "title": "Redação de Conteúdo",
+          "description": "Criando conteúdo persuasivo e otimizado para SEO que impulsiona engajamento, autoridade e conversões."
+        },
+        "strategicPlanning": {
+          "title": "Planejamento Estratégico",
+          "description": "Gere leads de alta qualidade através de campanhas segmentadas e funis otimizados para máximo de conversões."
+        }
+      }
+    },
+    "Testimonials": {
+      "title": "O que nossos clientes dizem",
+      "subtitle": "As palavras de nossos clientes refletem nosso compromisso com a excelência.",
+      "testimonials": {
+        "jacob": {
+          "name": "Jacob Williams",
+          "role": "CEO de Tecnologia",
+          "text": "Sua plataforma transformou a forma como abordamos campanhas. As ferramentas intuitivas e integrações perfeitas nos economizaram muito tempo."
+        },
+        "ethan": {
+          "name": "Ethan Reynolds",
+          "role": "Dono de Café",
+          "text": "Sua abordagem de marketing trouxe mais fluxo de clientes e pedidos online. As insights baseados em dados fizeram toda a diferença."
+        },
+        "nathan": {
+          "name": "Nathan Carter",
+          "role": "Fundador de Fitness",
+          "text": "Seu sistema melhorou nosso engajamento com clientes e conversões de leads. As ferramentas fáceis de usar simplificaram todo o nosso processo de vendas."
+        },
+        "daniel": {
+          "name": "Daniel Foster",
+          "role": "CEO Imobiliário",
+          "text": "Eles refinaram a presença digital da nossa marca e aumentaram a retenção de clientes. As estratégias personalizadas causaram um impacto enorme."
+        },
+        "mitchell": {
+          "name": "Mitchell Apparel",
+          "role": "CEO de Moda",
+          "text": "Sua plataforma melhorou a coordenação de projetos e o fluxo de trabalho de design. As ferramentas avançadas nos ajudaram a cumprir prazos sem estresse."
+        },
+        "lucas": {
+          "name": "Lucas Bennett",
+          "role": "Arquiteto",
+          "text": "Trabalhar com eles foi revolucionário para nosso estúdio. Sua atenção aos detalhes e visão criativa excederam nossas expectativas."
+        }
+      }
+    },
+    "Pricing": {
+      "title": "Por que a Upreach se destaca",
+      "subtitle": "Veja como a Upreach entrega mais valor, clareza e resultados comparado a provedores de serviços típicos.",
+      "othersTitle": "Outras Agências",
+      "upreachTitle": "Upreach",
+      "upreachBadge": "Nossa Agência",
+      "others": {
+        "generic": "Estratégias genéricas e padronizadas",
+        "vanity": "Foco em métricas vaidade (curtidas, compartilhamentos)",
+        "slow": "Tempos de resposta lentos e comunicação precária",
+        "minimal": "Suporte mínimo pós-lançamento ou orientação",
+        "outdated": "Usam técnicas de marketing desatualizadas"
+      },
+      "upreach": {
+        "custom": "Estratégias personalizadas alinhadas aos seus objetivos de negócio",
+        "kpis": "Foco em KPIs reais como leads, conversões e ROI",
+        "support": "Comunicação transparente e suporte dedicado",
+        "tools": "Usamos as últimas ferramentas e táticas de marketing baseadas em dados",
+        "longTerm": "Fornecemos suporte e otimização de longo prazo"
+      }
+    },
+    "Faq": {
+      "title": "Suas perguntas, respondidas.",
+      "subtitle": "Encontre respostas rápidas para perguntas comuns sobre nossos serviços, processo e como podemos ajudá-lo a alcançar seus objetivos.",
+      "questions": {
+        "q1": {
+          "question": "Como sua abordagem de marketing se diferencia dos concorrentes?",
+          "answer": "Focamos em estratégias baseadas em dados e KPIs reais em vez de métricas vaidade. Nossa abordagem é adaptada aos seus objetivos específicos de negócio e público, garantindo máximo ROI."
+        },
+        "q2": {
+          "question": "O que torna suas estratégias de geração de leads eficazes?",
+          "answer": "Nossa geração de leads combina otimização avançada de funis com marketing de conteúdo segmentado, garantindo que não apenas atraiamo tráfego, mas também o convertamos em leads de alta qualidade."
+        },
+        "q3": {
+          "question": "Como você mede com precisão o sucesso de uma campanha?",
+          "answer": "Usamos várias ferramentas de análise para rastrear conversões, custo por lead e crescimento de receita geral. Você receberá relatórios transparentes que mostram exatamente como seu investimento está performando."
+        },
+        "q4": {
+          "question": "Como posso começar facilmente com seus serviços hoje?",
+          "answer": "Basta preencher nosso formulário de contato ou agendar uma chamada de consultoria. Discutiremos seus objetivos e criaremos um plano personalizado para ajudar sua empresa a escalar com confiança."
+        },
+        "q5": {
+          "question": "Em quais plataformas você especializa para marketing digital?",
+          "answer": "Nos especializamos em uma ampla gama de plataformas, incluindo Google Ads, Meta Ads (Facebook/Instagram), LinkedIn e várias ferramentas de SEO para garantir que sua marca seja visível onde seus clientes estão."
+        },
+        "q6": {
+          "question": "Você oferece soluções personalizadas para diferentes indústrias?",
+          "answer": "Sim, temos experiência trabalhando com diversas indústrias, de Tecnologia e Imobiliário até Fitness e Moda. Adaptamos nossas estratégias para atender aos desafios únicos do seu setor."
+        }
+      }
+    },
+    "CtaBanner": {
+      "title": "Pronto para elevar sua marca e desbloquear novo crescimento?",
+      "subtitle": "Com anos de experiência, ajudamos empresas a gerar milhões. Parceiro conosco para escalar com confiança.",
+      "cta": "Começar agora"
+    },
+    "LeadCapture": {
+      "title": "Sucesso que você pode ver",
+      "subtitle": "Uma visão dos nossos projetos mais impactantes e histórias de sucesso.",
+      "projects": {
+        "growth360": {
+          "title": "Growth360 Agency",
+          "description": "Aumentou as vendas através de marketing de influenciadores e anúncios sociais segmentados.",
+          "badges": ["85% Crescimento de Receita", "70% Crescimento de Tráfego Orgânico"]
+        },
+        "pureglow": {
+          "title": "PureGlow Skincare",
+          "description": "Aumentou a confiança na marca com marketing de conteúdo e anúncios segmentados.",
+          "badges": ["75% Crescimento de Receita", "65% Crescimento de Tráfego Orgânico"]
+        },
+        "urbanfit": {
+          "title": "UrbanFit Academia",
+          "description": "Aumentou Inscrições através de campanhas digitais envolventes e promoções segmentadas.",
+          "badges": ["88% Crescimento de Receita", "75% Crescimento de Tráfego Orgânico"]
+        },
+        "chronolux": {
+          "title": "ChronoLux",
+          "description": "Implementou uma estratégia de SEO e PPC baseada em dados, aumentando a visibilidade online.",
+          "badges": ["75% Crescimento de Receita", "70% Crescimento de Tráfego Orgânico"]
+        }
+      }
+    }
+  }
+}

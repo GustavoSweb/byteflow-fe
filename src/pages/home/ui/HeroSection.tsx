@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,6 +19,8 @@ import iconArrowUp from "@/assets/icon-arrow-up.svg";
 const BRAND_LOGOS = [logo1, logo2, logo1, logo2, logo1, logo2];
 
 export default function HeroSection() {
+  const t = useTranslations("HomePage.Hero");
+
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-[#002329] flex items-center justify-center px-6 py-24 md:px-[60px] md:py-[152px]">
       <div
@@ -43,11 +46,10 @@ export default function HeroSection() {
         <div className="flex flex-col gap-10 lg:w-[588px]">
           <div className="flex flex-col gap-6">
             <h1 className="font-semibold text-white leading-tight tracking-[-1.2px] text-[clamp(36px,5vw,57.4px)]">
-              Grow your business, <span className="block">master every move.</span>
+              {t("title")}
             </h1>
             <p className="max-w-[500px] text-[rgba(255,255,255,0.75)] text-[16.5px] leading-[1.53]">
-              Helping businesses thrive with innovative digital strategies, creative solutions, and
-              measurable outcomes.
+              {t("subtitle")}
             </p>
           </div>
 
@@ -57,13 +59,13 @@ export default function HeroSection() {
                 href="#book"
                 className="inline-flex items-center justify-center rounded-full bg-[#50c878] px-7 py-[10px] text-[17px] font-medium text-[#0d0d0d] transition-opacity hover:opacity-90"
               >
-                Book a call
+                {t("bookCall")}
               </Link>
               <button
                 className="inline-flex items-center justify-center rounded-full bg-[rgba(255,255,255,0.12)] px-7 py-[10px] text-[16.7px] font-normal text-white backdrop-blur-[4px] transition-colors hover:bg-[rgba(255,255,255,0.2)]"
                 type="button"
               >
-                Learn more
+                {t("learnMore")}
               </button>
             </div>
 
@@ -116,7 +118,7 @@ export default function HeroSection() {
               <Image src={iconHeart} alt="" fill className="object-contain" />
               <Image src={iconHeart2} alt="" fill className="object-contain" />
             </div>
-            <span className="whitespace-nowrap text-[14.6px] text-white">2k+ Success Stories</span>
+            <span className="whitespace-nowrap text-[14.6px] text-white">{t("successStories")}</span>
           </div>
 
           <div className="absolute -left-[60px] bottom-6 flex items-center gap-3 rounded-2xl bg-[rgba(255,255,255,0.12)] p-4 backdrop-blur-[8px]">
@@ -128,14 +130,14 @@ export default function HeroSection() {
             </div>
             <div className="flex flex-col gap-1">
               <span className="whitespace-nowrap text-[14.9px] text-white">
-                Your Growth, Our Mission
+                {t("growthMission")}
               </span>
               <div className="flex items-center gap-1.5">
                 <div className="relative h-[22px] w-[22px] shrink-0">
                   <Image src={iconArrowUp} alt="" fill className="object-contain" />
                 </div>
                 <span className="text-[18px] font-semibold text-white">+65%</span>
-                <span className="text-[15px] text-[rgba(255,255,255,0.75)]">ROI Boost</span>
+                <span className="text-[15px] text-[rgba(255,255,255,0.75)]">{t("roiBoost")}</span>
               </div>
             </div>
           </div>

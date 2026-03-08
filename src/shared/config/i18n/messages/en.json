@@ -1,0 +1,166 @@
+{
+  "HomePage": {
+    "title": "Welcome to Byteflow",
+    "subtitle": "Your digitization platform",
+    "Hero": {
+      "title": "Grow your business, master every move.",
+      "subtitle": "Helping businesses thrive with innovative digital strategies, creative solutions, and measurable outcomes.",
+      "bookCall": "Book a call",
+      "learnMore": "Learn more",
+      "successStories": "2k+ Success Stories",
+      "growthMission": "Your Growth, Our Mission",
+      "roiBoost": "ROI Boost"
+    },
+    "Benefits": {
+      "title": "At Upreach, we deliver real results through high-converting marketing strategies designed to scale your business, attract the right audience, and maximize ROI with precision."
+    },
+    "HowItWorks": {
+      "title": "What we offer",
+      "subtitle": "Comprehensive solutions for business success.",
+      "services": {
+        "digitalMarketing": {
+          "title": "Digital Marketing",
+          "description": "Maximize online visibility with paid ads, social media, and strategic SEO to drive targeted traffic and higher conversions."
+        },
+        "businessConsulting": {
+          "title": "Business Consulting",
+          "description": "Enhance business strategy, optimize core processes, and leverage real-time analytics for sustainable growth."
+        },
+        "leadGeneration": {
+          "title": "Lead Generation",
+          "description": "Optimize advanced funnels, automate processes, and boost customer conversions to generate leads."
+        },
+        "brandStrategy": {
+          "title": "Brand Strategy",
+          "description": "Building a powerful, data-driven brand identity that resonates, inspires, and drives long-term success."
+        },
+        "contentWriting": {
+          "title": "Content Writing",
+          "description": "Crafting compelling, SEO-optimized content that boosts engagement, authority, and conversions."
+        },
+        "strategicPlanning": {
+          "title": "Strategic Planning",
+          "description": "Generate high-quality leads through targeted campaigns and optimized funnels for maximum conversions."
+        }
+      }
+    },
+    "Testimonials": {
+      "title": "What Our Clients Say",
+      "subtitle": "Our clients' words reflect our commitment to excellence.",
+      "testimonials": {
+        "jacob": {
+          "name": "Jacob Williams",
+          "role": "Tech CEO",
+          "text": "Their platform transformed how we approach campaigns. The intuitive tools and seamless integrations saved us a lot of time."
+        },
+        "ethan": {
+          "name": "Ethan Reynolds",
+          "role": "Café Owner",
+          "text": "Their marketing approach brought in more foot traffic and online orders. The data-driven insights made all the difference."
+        },
+        "nathan": {
+          "name": "Nathan Carter",
+          "role": "Fitness Founder",
+          "text": "Their system improved our client engagement and lead conversions. The easy-to-use tools streamlined our entire sales process."
+        },
+        "daniel": {
+          "name": "Daniel Foster",
+          "role": "Real Estate CEO",
+          "text": "They refined our brand's digital presence and increased customer retention. The personalized strategies made a huge impact."
+        },
+        "mitchell": {
+          "name": "Mitchell Apparel",
+          "role": "Fashion CEO",
+          "text": "Their platform enhanced project coordination and design workflow. The advanced tools helped us meet deadlines stress-free."
+        },
+        "lucas": {
+          "name": "Lucas Bennett",
+          "role": "Architect",
+          "text": "Working with them was a game-changer for our studio. Their attention to detail and creative vision exceeded our expectations."
+        }
+      }
+    },
+    "Pricing": {
+      "title": "Why Upreach Stands Out",
+      "subtitle": "Here's how Upreach delivers more value, clarity, and results compared to typical service providers.",
+      "othersTitle": "Other Agencies",
+      "upreachTitle": "Upreach",
+      "upreachBadge": "Our Agency",
+      "others": {
+        "generic": "Generic, one-size-fits-all strategies",
+        "vanity": "Focus on vanity metrics (likes, shares)",
+        "slow": "Slow response times and poor communication",
+        "minimal": "Minimal post-launch support or guidance",
+        "outdated": "Use outdated marketing techniques"
+      },
+      "upreach": {
+        "custom": "Custom strategies tailored to your business goals",
+        "kpis": "Focus on real KPIs like leads, conversions, and ROI",
+        "support": "Transparent communication and dedicated support",
+        "tools": "Use the latest tools and data-driven marketing tactics",
+        "longTerm": "Provide long-term support and optimization"
+      }
+    },
+    "Faq": {
+      "title": "Your questions, answered.",
+      "subtitle": "Find quick answers to common queries about our services, process, and how we can help you achieve your goals.",
+      "questions": {
+        "q1": {
+          "question": "How does your marketing approach stand out from competitors?",
+          "answer": "We focus on data-driven strategies and real KPIs rather than vanity metrics. Our approach is tailored to your specific business goals and audience, ensuring maximum ROI."
+        },
+        "q2": {
+          "question": "What makes your lead generation strategies effective?",
+          "answer": "Our lead generation combines advanced funnel optimization with targeted content marketing, ensuring that we not only attract traffic but convert it into high-quality leads."
+        },
+        "q3": {
+          "question": "How do you accurately measure the success of a campaign?",
+          "answer": "We use a variety of analytics tools to track conversions, cost per lead, and overall revenue growth. You'll receive transparent reports that show exactly how your investment is performing."
+        },
+        "q4": {
+          "question": "How can I easily get started with your services today?",
+          "answer": "Simply fill out our contact form or book a consultation call. We'll discuss your goals and create a custom plan to help your business scale confidently."
+        },
+        "q5": {
+          "question": "What platforms do you specialize in for digital marketing?",
+          "answer": "We specialize in a wide range of platforms including Google Ads, Meta Ads (Facebook/Instagram), LinkedIn, and various SEO tools to ensure your brand is visible where your customers are."
+        },
+        "q6": {
+          "question": "Do you offer tailored solutions for different industries?",
+          "answer": "Yes, we have experience working with diverse industries from Tech and Real Estate to Fitness and Fashion. We adapt our strategies to meet the unique challenges of your sector."
+        }
+      }
+    },
+    "CtaBanner": {
+      "title": "Ready to elevate your brand and unlock new growth?",
+      "subtitle": "With years of experience, we've helped businesses generate millions. Partner with us to scale confidently.",
+      "cta": "Get started"
+    },
+    "LeadCapture": {
+      "title": "Success You Can See",
+      "subtitle": "A glimpse into our most impactful projects and success stories.",
+      "projects": {
+        "growth360": {
+          "title": "Growth360 Agency",
+          "description": "Increased sales through influencer marketing and targeted social ads.",
+          "badges": ["85% Revenue Growth", "70% Organic Traffic Growth"]
+        },
+        "pureglow": {
+          "title": "PureGlow Skincare",
+          "description": "Boosted brand trust with content marketing and targeted ads.",
+          "badges": ["75% Revenue Growth", "65% Organic Traffic Growth"]
+        },
+        "urbanfit": {
+          "title": "UrbanFit Gym",
+          "description": "Increased sign-ups through engaging digital campaigns and targeted promotions.",
+          "badges": ["88% Revenue Growth", "75% Organic Traffic Growth"]
+        },
+        "chronolux": {
+          "title": "ChronoLux",
+          "description": "Implemented a data-driven SEO and PPC strategy, boosting online visibility.",
+          "badges": ["75% Revenue Growth", "70% Organic Traffic Growth"]
+        }
+      }
+    }
+  }
+}
