@@ -14,6 +14,21 @@
     "Benefits": {
       "title": "Na Upreach, entregamos resultados reais através de estratégias de marketing de alta conversão projetadas para escalar seu negócio, atraer o público certo e maximizar o ROI com precisão."
     },
+    "WhyChooseUs": {
+      "title": "Por que somos a escolha certa",
+      "subtitle": "Criamos estratégias de impacto, refinamos o posicionamento da marca e geramos resultados reais através de conteúdo inteligente e campanhas escaláveis.",
+      "cta": "Por dentro do nosso processo",
+      "growthDriven": {
+        "title": "Focado em Crescimento",
+        "subtitle": "Focado em KPIs para crescimento real."
+      },
+      "experience": "10+ Anos de Experiência",
+      "stats": {
+        "successRate": { "value": "98%", "label": "Taxa de Sucesso do Cliente" },
+        "campaignsLaunched": { "value": "200+", "label": "Campanhas Lançadas" },
+        "revenueGenerated": { "value": "$250K+", "label": "Receita Gerada" }
+      }
+    },
     "HowItWorks": {
       "title": "O que oferecemos",
       "subtitle": "Soluções completas para o sucesso do seu negócio.",

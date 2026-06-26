@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import HeroSection from "./HeroSection";
 import BenefitsSection from "./BenefitsSection";
+import WhyChooseUs from "./WhyChooseUs";
 import HowItWorksSection from "./HowItWorksSection";
 import PricingSection from "./PricingSection";
 import LeadCapture from "./LeadCapture";
@@ -16,8 +17,9 @@ export const HomePage: FC<HomePageProps> = () => {
       <HeroSection />
       <BenefitsSection />
       <HowItWorksSection />
-      <PricingSection />
+      <WhyChooseUs />
       <LeadCapture />
+      <PricingSection />
       <TestimonialsSection />
       <FaqSection />
       <CtaBannerSection />

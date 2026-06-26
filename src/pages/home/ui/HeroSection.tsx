@@ -3,18 +3,13 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { Smile, Heart, TrendingUp, ArrowUp } from "lucide-react";
 
-import bgGrid from "@/assets/bg-grid.png";
-import bgMask from "@/assets/bg-mask.svg";
-import heroImage from "@/assets/hero-image.png";
-import logo1 from "@/assets/logo-1.svg";
-import logo2 from "@/assets/logo-2.svg";
-import iconSmile from "@/assets/icon-smile.svg";
-import iconHeart from "@/assets/icon-heart.svg";
-import iconHeart2 from "@/assets/icon-heart-2.svg";
-import iconChart from "@/assets/icon-chart.svg";
-import iconChart2 from "@/assets/icon-chart-2.svg";
-import iconArrowUp from "@/assets/icon-arrow-up.svg";
+import bgGrid from "../assets/images/bg-grid.png";
+import bgMask from "../assets/images/bg-mask.svg";
+import heroImage from "../assets/images/hero-image.png";
+import logo1 from "../assets/images/logo-1.svg";
+import logo2 from "../assets/images/logo-2.svg";
 
 const BRAND_LOGOS = [logo1, logo2, logo1, logo2, logo1, logo2];
 
@@ -96,8 +91,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative shrink-0">
-          <div className="relative h-[400px] w-[320px] overflow-hidden rounded-3xl md:h-[512px] md:w-[404px]">
+        <div className="relative shrink-0 mt-8 lg:mt-0">
+          <div className="relative h-[350px] w-[280px] sm:h-[400px] sm:w-[320px] overflow-hidden rounded-3xl md:h-[512px] md:w-[404px]">
             <Image
               src={heroImage}
               alt="Business professional"
@@ -107,37 +102,27 @@ export default function HeroSection() {
             />
           </div>
 
-          <div className="absolute -right-4 -top-4 flex h-[55px] w-[55px] items-center justify-center rounded-full bg-[rgba(255,255,255,0.12)] backdrop-blur-[8px]">
-            <div className="relative h-[34px] w-[34px]">
-              <Image src={iconSmile} alt="Emoji" fill className="object-contain" />
-            </div>
+          <div className="absolute -right-2 -top-2 md:-right-4 md:-top-4 flex h-[40px] w-[40px] md:h-[55px] md:w-[55px] items-center justify-center rounded-full bg-[rgba(255,255,255,0.12)] backdrop-blur-[8px] text-white">
+            <Smile size={24} className="md:w-[30px] md:h-[30px]" />
           </div>
 
-          <div className="absolute bottom-[137px] -left-[60px] flex items-center gap-3 rounded-[14px] bg-[rgba(255,255,255,0.12)] px-4 py-[15px] backdrop-blur-[8px]">
-            <div className="relative h-[22px] w-[22px] shrink-0">
-              <Image src={iconHeart} alt="" fill className="object-contain" />
-              <Image src={iconHeart2} alt="" fill className="object-contain" />
-            </div>
-            <span className="whitespace-nowrap text-[14.6px] text-white">{t("successStories")}</span>
+          <div className="absolute bottom-[120px] -left-2 md:bottom-[137px] md:-left-[60px] flex items-center gap-2 md:gap-3 rounded-[10px] md:rounded-[14px] bg-[rgba(255,255,255,0.12)] px-3 md:px-4 py-2 md:py-[15px] backdrop-blur-[8px] scale-90 md:scale-100">
+            <Heart size={16} className="text-[#50c878] md:w-5 md:h-5" fill="#50c878" />
+            <span className="whitespace-nowrap text-[12px] md:text-[14.6px] text-white">{t("successStories")}</span>
           </div>
 
-          <div className="absolute -left-[60px] bottom-6 flex items-center gap-3 rounded-2xl bg-[rgba(255,255,255,0.12)] p-4 backdrop-blur-[8px]">
-            <div className="relative flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-full border-2 border-[rgba(255,255,255,0.12)]">
-              <div className="relative h-[22px] w-[22px]">
-                <Image src={iconChart} alt="" fill className="object-contain" />
-                <Image src={iconChart2} alt="" fill className="object-contain" />
-              </div>
+          <div className="absolute -left-2 md:-left-[60px] bottom-4 md:bottom-6 flex items-center gap-2 md:gap-3 rounded-xl md:rounded-2xl bg-[rgba(255,255,255,0.12)] p-3 md:p-4 backdrop-blur-[8px] scale-90 md:scale-100 origin-bottom-left">
+            <div className="relative flex h-[32px] w-[32px] md:h-[44px] md:w-[44px] shrink-0 items-center justify-center rounded-full border-2 border-[rgba(255,255,255,0.12)] text-[#50c878]">
+              <TrendingUp size={20} className="md:w-6 md:h-6" />
             </div>
-            <div className="flex flex-col gap-1">
-              <span className="whitespace-nowrap text-[14.9px] text-white">
+            <div className="flex flex-col gap-0.5 md:gap-1">
+              <span className="whitespace-nowrap text-[11px] md:text-[14.9px] text-white">
                 {t("growthMission")}
               </span>
               <div className="flex items-center gap-1.5">
-                <div className="relative h-[22px] w-[22px] shrink-0">
-                  <Image src={iconArrowUp} alt="" fill className="object-contain" />
-                </div>
-                <span className="text-[18px] font-semibold text-white">+65%</span>
-                <span className="text-[15px] text-[rgba(255,255,255,0.75)]">{t("roiBoost")}</span>
+                <ArrowUp size={14} className="text-[#50c878] md:w-[18px] md:h-[18px]" />
+                <span className="text-[14px] md:text-[18px] font-semibold text-white">+65%</span>
+                <span className="text-[11px] md:text-[15px] text-[rgba(255,255,255,0.75)]">{t("roiBoost")}</span>
               </div>
             </div>
           </div>

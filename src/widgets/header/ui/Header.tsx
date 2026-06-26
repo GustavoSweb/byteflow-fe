@@ -14,7 +14,7 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-dark px-[60px] py-[12px] w-full box-border relative md:px-[20px]">
+    <header className="bg-dark px-6 md:px-[60px] py-[12px] w-full box-border relative z-[1000]">
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
         <a href="/" className="flex items-center gap-[8px] no-underline shrink-0">
           <svg
@@ -38,16 +38,17 @@ export const Header = () => {
               </clipPath>
             </defs>
           </svg>
-          <span className="text-white/75 font-bold text-[21px] leading-[1.46] md:text-[18px]">
+          <span className="text-white/75 font-bold text-[18px] md:text-[21px] leading-[1.46]">
             Upreach
           </span>
         </a>
 
         <nav
           className={`
-          flex items-center gap-[44px]
-          md:absolute md:top-full md:left-0 md:right-0 md:bg-dark md:flex-col md:items-start md:gap-0 md:overflow-hidden md:transition-all md:duration-300 md:px-[20px] md:z-[100]
-          ${menuOpen ? "md:max-h-[400px] md:py-[16px] md:pb-[24px] md:gap-[20px]" : "md:max-h-0 md:py-0"}
+          flex items-center
+          absolute top-full left-0 right-0 bg-dark flex-col items-start gap-0 overflow-hidden transition-all duration-300 px-6 z-[100]
+          lg:static lg:flex-row lg:items-center lg:gap-[44px] lg:px-0 lg:max-h-none lg:py-0 lg:overflow-visible
+          ${menuOpen ? "max-h-[400px] py-[16px] pb-[24px] gap-[20px]" : "max-h-0 py-0"}
         `}
         >
           {navLinks.map((link) => (
@@ -61,7 +62,7 @@ export const Header = () => {
           ))}
           <a
             href="#contact"
-            className="hidden md:inline-flex items-center justify-center py-[9px] pb-[10px] px-[28px] rounded-full bg-primary text-[#0d0d0d] text-[17px] font-medium leading-[25.2px] no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-hover mt-[4px]"
+            className="lg:hidden inline-flex items-center justify-center py-[9px] pb-[10px] px-[28px] rounded-full bg-primary text-[#0d0d0d] text-[17px] font-medium leading-[25.2px] no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-hover mt-[4px]"
           >
             Contact us
           </a>
@@ -69,13 +70,13 @@ export const Header = () => {
 
         <a
           href="#contact"
-          className="inline-flex items-center justify-center py-[9px] pb-[10px] px-[28px] rounded-full bg-primary text-[#0d0d0d] text-[17px] font-medium leading-[25.2px] no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-hover shrink-0 md:hidden"
+          className="hidden lg:inline-flex items-center justify-center py-[9px] pb-[10px] px-[28px] rounded-full bg-primary text-[#0d0d0d] text-[17px] font-medium leading-[25.2px] no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-hover shrink-0"
         >
           Contact us
         </a>
 
         <button
-          className="hidden md:flex flex-col gap-[5px] bg-none border-none cursor-pointer p-[4px]"
+          className="flex lg:hidden flex-col gap-[5px] bg-none border-none cursor-pointer p-[4px]"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
