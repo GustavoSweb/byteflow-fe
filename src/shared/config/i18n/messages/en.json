@@ -1,7 +1,7 @@
 {
   "HomePage": {
-    "title": "Welcome to Byteflow",
-    "subtitle": "Your digitization platform",
+    "title": "Welcome to ByteFlow",
+    "subtitle": "Building digital solutions that transform businesses",
     "Hero": {
       "title": "Grow your business, master every move.",
       "subtitle": "Helping businesses thrive with innovative digital strategies, creative solutions, and measurable outcomes.",
@@ -12,7 +12,7 @@
       "roiBoost": "ROI Boost"
     },
     "Benefits": {
-      "title": "At Upreach, we deliver real results through high-converting marketing strategies designed to scale your business, attract the right audience, and maximize ROI with precision."
+      "title": "At ByteFlow, we deliver real results through high-converting marketing strategies designed to scale your business, attract the right audience, and maximize ROI with precision."
     },
     "WhyChooseUs": {
       "title": "Why we're the right choice",
@@ -22,7 +22,7 @@
         "title": "Growth-Driven",
         "subtitle": "KPI-focused for real growth."
       },
-      "experience": "10+ Years of Experience",
+      "experience": "5+ Years of Experience",
       "stats": {
         "successRate": { "value": "98%", "label": "Client Success Rate" },
         "campaignsLaunched": { "value": "200+", "label": "Campaigns Launched" },
@@ -96,11 +96,11 @@
       }
     },
     "Pricing": {
-      "title": "Why Upreach Stands Out",
-      "subtitle": "Here's how Upreach delivers more value, clarity, and results compared to typical service providers.",
+      "title": "Why ByteFlow Stands Out",
+      "subtitle": "Here's how ByteFlow delivers more value, clarity, and results compared to typical service providers.",
       "othersTitle": "Other Agencies",
-      "upreachTitle": "Upreach",
-      "upreachBadge": "Our Agency",
+      "upreachTitle": "ByteFlow",
+      "upreachBadge": "ByteFlow",
       "others": {
         "generic": "Generic, one-size-fits-all strategies",
         "vanity": "Focus on vanity metrics (likes, shares)",

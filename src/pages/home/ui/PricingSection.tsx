@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Check, X } from "lucide-react";
 
 const OTHERS_KEYS = ["generic", "vanity", "slow", "minimal", "outdated"];
-const UPREACH_KEYS = ["custom", "kpis", "support", "tools", "longTerm"];
+const BYTEFLOW_KEYS = ["custom", "kpis", "support", "tools", "longTerm"];
 
 export default function PricingSection() {
   const t = useTranslations("HomePage.Pricing");
@@ -39,10 +39,10 @@ export default function PricingSection() {
             </div>
           </div>
 
-          {/* Upreach */}
+          {/* ByteFlow */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center justify-center gap-2">
-              {/* Upreach logo icon */}
+              {/* ByteFlow logo icon */}
               <div className="w-[22px] h-[22px] flex items-center justify-center">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
                   <path
@@ -60,7 +60,7 @@ export default function PricingSection() {
                   "linear-gradient(204deg, rgb(51, 130, 77) 0%, rgb(0, 35, 41) 46%, rgb(0, 35, 41) 100%)",
               }}
             >
-              {UPREACH_KEYS.map((key, index) => (
+              {BYTEFLOW_KEYS.map((key, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <div className="flex-none w-[22px] h-[22px] rounded-full border border-[#50c878]/60 flex items-center justify-center">
                     <Check size={12} className="text-[#50c878]" />

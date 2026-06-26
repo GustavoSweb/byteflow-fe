@@ -1,7 +1,7 @@
 {
   "HomePage": {
-    "title": "Bem-vindo ao Byteflow",
-    "subtitle": "Sua plataforma de digitalização",
+    "title": "Bem-vindo à ByteFlow",
+    "subtitle": "Construindo soluções digitais que transformam negócios",
     "Hero": {
       "title": "Cresça seu negócio, domine cada movimento.",
       "subtitle": "Auxiliando empresas a prosperar com estratégias digitais inovadoras, soluções criativas e resultados mensuráveis.",
@@ -12,7 +12,7 @@
       "roiBoost": "Aumento de ROI"
     },
     "Benefits": {
-      "title": "Na Upreach, entregamos resultados reais através de estratégias de marketing de alta conversão projetadas para escalar seu negócio, atraer o público certo e maximizar o ROI com precisão."
+      "title": "Na ByteFlow, entregamos resultados reais através de estratégias de marketing de alta conversão projetadas para escalar seu negócio, atrair o público certo e maximizar o ROI com precisão."
     },
     "WhyChooseUs": {
       "title": "Por que somos a escolha certa",
@@ -22,7 +22,7 @@
         "title": "Focado em Crescimento",
         "subtitle": "Focado em KPIs para crescimento real."
       },
-      "experience": "10+ Anos de Experiência",
+      "experience": "5+ Anos de Experiência",
       "stats": {
         "successRate": { "value": "98%", "label": "Taxa de Sucesso do Cliente" },
         "campaignsLaunched": { "value": "200+", "label": "Campanhas Lançadas" },
@@ -96,11 +96,11 @@
       }
     },
     "Pricing": {
-      "title": "Por que a Upreach se destaca",
-      "subtitle": "Veja como a Upreach entrega mais valor, clareza e resultados comparado a provedores de serviços típicos.",
+      "title": "Por que a ByteFlow se destaca",
+      "subtitle": "Veja como a ByteFlow entrega mais valor, clareza e resultados comparado a provedores de serviços típicos.",
       "othersTitle": "Outras Agências",
-      "upreachTitle": "Upreach",
-      "upreachBadge": "Nossa Agência",
+      "upreachTitle": "ByteFlow",
+      "upreachBadge": "ByteFlow",
       "others": {
         "generic": "Estratégias genéricas e padronizadas",
         "vanity": "Foco em métricas vaidade (curtidas, compartilhamentos)",

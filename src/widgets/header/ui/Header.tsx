@@ -3,10 +3,10 @@
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "About", href: "#about" },
+  { label: "Serviços", href: "#services" },
+  { label: "Trabalhos", href: "#work" },
+  { label: "Depoimentos", href: "#testimonials" },
+  { label: "Sobre", href: "#about" },
   { label: "Blog", href: "#blog" },
 ];
 
@@ -39,7 +39,7 @@ export const Header = () => {
             </defs>
           </svg>
           <span className="text-white/75 font-bold text-[18px] md:text-[21px] leading-[1.46]">
-            Upreach
+            ByteFlow
           </span>
         </a>
 
@@ -64,7 +64,7 @@ export const Header = () => {
             href="#contact"
             className="lg:hidden inline-flex items-center justify-center py-[9px] pb-[10px] px-[28px] rounded-full bg-primary text-[#0d0d0d] text-[17px] font-medium leading-[25.2px] no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-hover mt-[4px]"
           >
-            Contact us
+            Fale Conosco
           </a>
         </nav>
 
@@ -72,7 +72,7 @@ export const Header = () => {
           href="#contact"
           className="hidden lg:inline-flex items-center justify-center py-[9px] pb-[10px] px-[28px] rounded-full bg-primary text-[#0d0d0d] text-[17px] font-medium leading-[25.2px] no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-hover shrink-0"
         >
-          Contact us
+          Fale Conosco
         </a>
 
         <button

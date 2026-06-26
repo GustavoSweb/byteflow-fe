@@ -21,22 +21,22 @@ export const Footer = () => {
                   fill="#50c878"
                 />
               </svg>
-              <span className="text-white font-bold text-[21px]">Upreach</span>
+              <span className="text-white font-bold text-[21px]">ByteFlow</span>
             </a>
 
             <div className="flex flex-col gap-6 max-w-[450px]">
               <div className="flex flex-col gap-3">
-                <h4 className="text-[18px] font-bold text-white">Stay Connected &amp; Informed</h4>
+                <h4 className="text-[18px] font-bold text-white">Fique Conectado</h4>
                 <p className="text-[15px] leading-[1.6] text-white/60 font-medium">
-                  Subscribe to our newsletter for the marketing insights, trends, &amp; growth
-                  strategies to scale your business.
+                  Assine nossa newsletter e receba insights, tendências e estratégias
+                  de marketing para escalar seu negócio.
                 </p>
               </div>
 
               <form className="flex gap-2 p-1 bg-white/[0.07] rounded-full border border-white/10">
                 <input
                   type="email"
-                  placeholder="Email Address"
+                  placeholder="Seu e-mail"
                   className="bg-transparent border-none outline-none px-6 py-2 flex-1 text-[15px] text-white placeholder:text-white/30"
                 />
                 <button
@@ -52,12 +52,12 @@ export const Footer = () => {
 
           <div className="lg:col-span-6 grid grid-cols-2 md:grid-cols-3 gap-8">
             <div className="flex flex-col gap-6">
-              <h5 className="text-[16px] font-bold text-white">Sections</h5>
+              <h5 className="text-[16px] font-bold text-white">Seções</h5>
               <ul className="flex flex-col gap-4 list-none p-0 m-0">
                 {[
-                  { href: "#services", label: "Services" },
-                  { href: "#work", label: "Work" },
-                  { href: "#testimonials", label: "Testimonials" },
+                  { href: "#services", label: "Serviços" },
+                  { href: "#work", label: "Trabalhos" },
+                  { href: "#testimonials", label: "Depoimentos" },
                 ].map(({ href, label }) => (
                   <li key={href}>
                     <a
@@ -72,12 +72,12 @@ export const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-6">
-              <h5 className="text-[16px] font-bold text-white">Information</h5>
+              <h5 className="text-[16px] font-bold text-white">Informações</h5>
               <ul className="flex flex-col gap-4 list-none p-0 m-0">
                 {[
-                  { href: "#faq", label: "FAQ's" },
+                  { href: "#faq", label: "FAQ" },
                   { href: "/404", label: "404" },
-                  { href: "#contact", label: "Contact" },
+                  { href: "#contact", label: "Contato" },
                 ].map(({ href, label }) => (
                   <li key={href}>
                     <a
@@ -95,9 +95,9 @@ export const Footer = () => {
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[14px] text-white/30 font-medium">
-            Copyright © 2024 – All Right Reserved
+            Copyright © 2024 – Todos os direitos reservados
           </p>
-          <p className="text-[14px] text-white/30 font-medium">Created by Khurram</p>
+          <p className="text-[14px] text-white/30 font-medium">Criado por Khurram</p>
         </div>
       </div>
     </footer>
