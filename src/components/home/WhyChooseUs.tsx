@@ -4,9 +4,9 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Play, TrendingUp, Star } from "lucide-react";
 
-import bgGrid from "../assets/images/bg-grid.png";
-import bgMask from "../assets/images/bg-mask.svg";
-import videoThumb from "../assets/images/video-thumb.png";
+import bgGrid from "./assets/images/bg-grid.png";
+import bgMask from "./assets/images/bg-mask.svg";
+import videoThumb from "./assets/images/video-thumb.png";
 
 const STAT_KEYS = ["successRate", "campaignsLaunched", "revenueGenerated"];
 

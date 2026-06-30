@@ -5,11 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Smile, Heart, TrendingUp, ArrowUp } from "lucide-react";
 
-import bgGrid from "../assets/images/bg-grid.png";
-import bgMask from "../assets/images/bg-mask.svg";
-import heroImage from "../assets/images/hero-image.png";
-import logo1 from "../assets/images/logo-1.svg";
-import logo2 from "../assets/images/logo-2.svg";
+import bgGrid from "./assets/images/bg-grid.png";
+import bgMask from "./assets/images/bg-mask.svg";
+import heroImage from "./assets/images/hero-image.png";
+import logo1 from "./assets/images/logo-1.svg";
+import logo2 from "./assets/images/logo-2.svg";
 
 const BRAND_LOGOS = [logo1, logo2, logo1, logo2, logo1, logo2];
 

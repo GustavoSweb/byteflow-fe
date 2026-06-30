@@ -26,3 +26,5 @@ export const HomePage: FC<HomePageProps> = () => {
     </main>
   );
 };
+
+export default HomePage;
