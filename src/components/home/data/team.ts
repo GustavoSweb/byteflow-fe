@@ -12,6 +12,9 @@ export interface TeamMember {
   photo: string;
   /** posição do recorte da foto (object-position) */
   photoPosition: string;
+  /** zoom opcional da foto, ancorado em `photoOrigin` (transform-origin) */
+  photoZoom?: number;
+  photoOrigin?: string;
   skills: string[];
   links: TeamLink[];
   /** selo opcional, ex.: avaliação em plataforma */
@@ -23,7 +26,8 @@ export const TEAM: TeamMember[] = [
     key: "gustavo",
     name: CONTACT.founder,
     photo: "/team/gustavo.png",
-    photoPosition: "center 65%",
+    // foto vertical com o Gustavo na borda direita: o corte pega cabeça, ombro e o monitor
+    photoPosition: "center 26%",
     skills: ["TypeScript", "React", "Next.js", "Vue / Nuxt", "Node.js", "Prisma", "PostgreSQL", "Docker", "Kubernetes", "AWS"],
     links: [
       { key: "portfolio", href: CONTACT.portfolio },

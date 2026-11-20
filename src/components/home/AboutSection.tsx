@@ -32,14 +32,18 @@ export default function AboutSection() {
           {TEAM.map((member) => (
             <li key={member.key}>
               <Card className="flex h-full flex-col overflow-hidden">
-                <div className="relative h-[340px] w-full bg-ink">
+                <div className="relative h-[340px] w-full overflow-hidden bg-ink">
                   <Image
                     src={member.photo}
                     alt={t(`members.${member.key}.photoAlt`)}
                     fill
                     sizes="(max-width: 768px) 90vw, 580px"
                     className="object-cover"
-                    style={{ objectPosition: member.photoPosition }}
+                    style={{
+                      objectPosition: member.photoPosition,
+                      transform: member.photoZoom ? `scale(${member.photoZoom})` : undefined,
+                      transformOrigin: member.photoOrigin,
+                    }}
                   />
                   <div className="absolute left-4 bottom-4 flex max-w-[calc(100%-2rem)] flex-col rounded-2xl bg-ink/75 px-5 py-4 backdrop-blur-[8px]">
                     <p className="font-display text-[19px] font-semibold text-white">{member.name}</p>
