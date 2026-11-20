@@ -2,27 +2,71 @@
 
 @source "../**/*.{ts,tsx}";
 
+/* ── ByteFlow design tokens ───────────────────────────────────────────── */
 @theme {
-    --font-inter: "Inter", sans-serif;
-    --breakpoint-lg: 1100px;
+    --breakpoint-lg: 68.75rem; /* 1100px — em rem para ordenar corretamente com sm/md */
 
-    --color-primary: #50c878;
+    /* Brand */
+    --color-ink: #002329;          /* fundos escuros, header/footer */
+    --color-ink-2: #013a3f;        /* cards sobre fundo escuro */
+    --color-primary: #50c878;      /* CTA, ícones, foco */
     --color-primary-hover: #3db862;
-    --color-primary-dark: #33824d;
-    --color-dark: #002329;
+    --color-primary-dark: #33824d; /* links e eyebrows em fundo claro */
+    --color-accent: #d4f534;       /* só métricas e destaques mínimos */
+
+    /* Neutros */
+    --color-fg: #0d0d0d;           /* texto em fundo claro */
+    --color-surface: #ffffff;
+    --color-surface-2: #f4f7f6;    /* cards claros */
+
+    /* Raios (nomes próprios para não sobrescrever a escala padrão do Tailwind) */
+    --radius-chip: 12px;
+    --radius-tile: 20px;
+    --radius-card: 24px;
+    --radius-panel: 40px;
 }
 
-:root {
-    --background: #ffffff;
-    --foreground: #171717;
+/* Fontes vêm de next/font (variáveis aplicadas no <html>) */
+@theme inline {
+    --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    --font-display: var(--font-space-grotesk), var(--font-inter), sans-serif;
+    --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-inter);
+    background: var(--color-surface);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
     margin: 0;
     padding: 0;
+}
+
+@layer base {
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-display);
+    }
+
+    ::selection {
+        background: var(--color-accent);
+        color: var(--color-ink);
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 3px;
+    }
 }
 
 @layer utilities {
@@ -33,4 +77,100 @@ body {
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
+}
+
+/* ── Motion (ver docs/PLANO-ANIMACOES.md) ─────────────────────────────── */
+
+/* Preloader só existe na 1ª visita (classe `intro` definida pelo script inicial) */
+.preloader {
+    display: none;
+}
+html.intro .preloader {
+    display: flex;
+}
+html.intro body {
+    overflow: hidden;
+}
+
+/* Elementos do hero começam ocultos só quando o JS de animação vai assumir */
+html.js-motion:not(.reduced) [data-hero-hide] {
+    visibility: hidden;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+/* Seções com âncora não ficam escondidas atrás do header fixo */
+section[id] {
+    scroll-margin-top: 72px;
+}
+
+/* Cursor de terminal piscando */
+@keyframes caret-blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+.caret {
+    animation: caret-blink 1s steps(1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+    .caret {
+        animation: none;
+    }
+}
+
+/* Linha de fluxo: rótulos `// seção` acendem quando a ponta passa por eles */
+[data-flow-node] {
+    position: relative;
+    transition: color 0.4s ease;
+}
+[data-flow-node]::before {
+    content: "";
+    position: absolute;
+    left: -14px;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: var(--color-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 35%, transparent), 0 0 14px var(--color-accent);
+    transform: translateY(-50%) scale(0);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+[data-flow-node].flow-lit::before {
+    transform: translateY(-50%) scale(1);
+}
+
+/* Processo em pipeline horizontal (ativado por JS no desktop) */
+.process-track[data-hscroll] {
+    display: flex;
+    width: max-content;
+    gap: 24px;
+}
+.process-track[data-hscroll] > li {
+    width: 420px;
+    flex-shrink: 0;
+}
+.process-track[data-hscroll] > li:not([data-active]):not([data-done]) {
+    filter: saturate(0.3) brightness(0.65);
+}
+.process-step[data-active] {
+    border-color: color-mix(in srgb, var(--color-primary) 60%, transparent);
+    background-color: color-mix(in srgb, var(--color-ink-2) 95%, var(--color-primary));
+    box-shadow: 0 20px 60px -20px color-mix(in srgb, var(--color-primary) 45%, transparent);
+}
+.process-track > li {
+    transition: filter 0.5s ease;
 }

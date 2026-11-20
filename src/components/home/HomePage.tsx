@@ -5,24 +5,26 @@ import WhyChooseUs from "./WhyChooseUs";
 import HowItWorksSection from "./HowItWorksSection";
 import PricingSection from "./PricingSection";
 import LeadCapture from "./LeadCapture";
-import TestimonialsSection from "./TestimonialsSection";
+import AboutSection from "./AboutSection";
 import FaqSection from "./FaqSection";
 import CtaBannerSection from "./CtaBannerSection";
+import { FlowPath } from "@/shared/motion/FlowPath";
 
 interface HomePageProps {}
 
 export const HomePage: FC<HomePageProps> = () => {
   return (
-    <main>
+    <main className="relative">
       <HeroSection />
       <BenefitsSection />
       <HowItWorksSection />
       <WhyChooseUs />
       <LeadCapture />
       <PricingSection />
-      <TestimonialsSection />
+      <AboutSection />
       <FaqSection />
       <CtaBannerSection />
+      <FlowPath />
     </main>
   );
 };

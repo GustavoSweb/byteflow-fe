@@ -2,20 +2,18 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
-import project1 from "./assets/images/project-1.jpg";
-import project2 from "./assets/images/project-2.jpg";
-import project3 from "./assets/images/project-3.jpg";
-import project4 from "./assets/images/project-4.jpg";
+import { ArrowRight, ArrowUpRight, Code2 } from "lucide-react";
+import { useLocalePaths } from "@/shared/config/i18n/paths";
+import { SectionHeader, Tag } from "@/shared/ui";
+import { Reveal } from "@/shared/motion/primitives";
+import { PROJECTS } from "./data/projects";
 
-const PROJECTS = [
-  { image: project1, key: "growth360" },
-  { image: project2, key: "pureglow" },
-  { image: project3, key: "urbanfit" },
-  { image: project4, key: "chronolux" },
-];
+const linkClass =
+  "inline-flex items-center gap-1 text-[14.5px] font-semibold text-primary-dark hover:text-ink transition-colors";
 
 export default function LeadCapture() {
   const t = useTranslations("HomePage.LeadCapture");
+  const paths = useLocalePaths();
   const [emblaRef] = useEmblaCarousel({
     align: "start",
     dragFree: true,
@@ -23,16 +21,16 @@ export default function LeadCapture() {
   });
 
   return (
-    <section className="bg-white py-24 flex flex-col items-center">
-      <div className="flex flex-col items-center gap-[15px] text-center px-6 md:px-[60px] mb-[52px] max-w-[1200px] mx-auto">
-        <h2 className="text-[clamp(32px,5vw,41.1px)] font-bold text-[#0d0d0d] tracking-tight leading-[1.28]">
-          {t("title")}
-        </h2>
-        <p className="text-[16.7px] leading-[1.5] text-[#0d0d0d]/70 font-medium">{t("subtitle")}</p>
-      </div>
+    <section id="work" className="bg-surface py-24 md:py-32 flex flex-col items-center">
+      <SectionHeader
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        subtitle={t("subtitle")}
+        className="px-6 md:px-[60px] mb-[52px]"
+      />
 
       <div
-        className="relative max-w-[1200px]"
+        className="relative w-full max-w-[1200px]"
         style={
           {
             "--gradient-size": "120px",
@@ -43,42 +41,67 @@ export default function LeadCapture() {
           } as React.CSSProperties
         }
       >
-        <div ref={emblaRef} className="overflow-hidden ">
-          <div className="flex gap-[18px] px-6 md:px-[60px] pb-4">
-            {PROJECTS.map((project, index) => (
-              <div key={index} className="flex-none w-[344px] flex flex-col gap-[19px]">
-                <div className="relative h-[325px] w-full rounded-[24px] overflow-hidden group">
-                  <Image
-                    src={project.image}
-                    alt={t(`projects.${project.key}.title`)}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/5" />
-                  <div className="absolute inset-0 p-6 flex flex-col justify-end gap-2 items-center">
-                    {t
-                      .raw(`projects.${project.key}.badges`)
-                      .map((badge: string, bIndex: number) => (
+        <div ref={emblaRef} className="overflow-hidden">
+          <Reveal stagger x={80} y={0} className="flex gap-[18px] px-6 md:px-[60px] pb-4">
+            {PROJECTS.map((project) => {
+              const title = t(`projects.${project.key}.title`);
+              const caseHref = paths.to(`/projetos/${project.slug}`);
+              return (
+                <article key={project.key} className="flex-none w-[300px] sm:w-[344px] flex flex-col gap-[19px]">
+                  <a href={caseHref} data-cursor-label={`${t("viewCase")} →`} aria-label={`${t("viewCase")}: ${title}`} className="relative block h-[325px] w-full rounded-card overflow-hidden group bg-surface-2">
+                    <Image
+                      src={project.image}
+                      alt={title}
+                      fill
+                      sizes="344px"
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end gap-2 items-center">
+                      {(t.raw(`projects.${project.key}.badges`) as string[]).map((badge) => (
                         <div
-                          key={bIndex}
-                          className="backdrop-blur-[4px] bg-[#0d0d0d]/20 border border-white/20 rounded-full px-6 py-[6px] text-white text-[14.4px] font-medium whitespace-nowrap shadow-sm"
+                          key={badge}
+                          className="backdrop-blur-[4px] bg-ink/40 border border-white/20 rounded-full px-5 py-[6px] font-mono text-white text-[13px] whitespace-nowrap"
                         >
                           {badge}
                         </div>
                       ))}
+                    </div>
+                  </a>
+                  <div className="flex flex-col gap-3">
+                    <h3 className="text-[21px] font-semibold text-fg leading-[1.4]">
+                      <a href={caseHref} className="hover:text-primary-dark transition-colors">
+                        {title}
+                      </a>
+                    </h3>
+                    <p className="text-[15.1px] leading-[1.5] text-fg/70 font-medium">
+                      {t(`projects.${project.key}.description`)}
+                    </p>
+                    <ul className="flex flex-wrap gap-2 list-none p-0 m-0">
+                      {project.tags.map((tag) => (
+                        <Tag key={tag}>{tag}</Tag>
+                      ))}
+                    </ul>
+                    <div className="flex flex-wrap gap-4 pt-1">
+                        <a href={caseHref} className={linkClass}>
+                          {t("viewCase")} <ArrowRight size={16} />
+                        </a>
+                        {project.url && (
+                          <a href={project.url} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                            {t("visitSite")} <ArrowUpRight size={16} />
+                          </a>
+                        )}
+                        {project.repo && (
+                          <a href={project.repo} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                            <Code2 size={16} /> {t("viewCode")}
+                          </a>
+                        )}
+                      </div>
                   </div>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <h3 className="text-[20.8px] font-medium text-[#0d0d0d] leading-[1.48]">
-                    {t(`projects.${project.key}.title`)}
-                  </h3>
-                  <p className="text-[15.1px] leading-[1.48] text-[#0d0d0d]/70 font-medium max-w-[310px]">
-                    {t(`projects.${project.key}.description`)}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+                </article>
+              );
+            })}
+          </Reveal>
         </div>
       </div>
     </section>

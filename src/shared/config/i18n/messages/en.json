@@ -1,63 +1,318 @@
 {
+  "Header": {
+    "nav": {
+      "services": "Services",
+      "work": "Work",
+      "about": "About",
+      "faq": "FAQ"
+    },
+    "cta": "Contact Us",
+    "language": "Language",
+    "menu": "Open menu"
+  },
+  "Footer": {
+    "contactTitle": "Let’s talk",
+    "contactText": "Have a project, an idea or a system that needs to evolve? Send us a message and we’ll get back with next steps.",
+    "sectionsTitle": "Sections",
+    "infoTitle": "Information",
+    "socialTitle": "Social",
+    "links": {
+      "services": "Services",
+      "work": "Work",
+      "about": "About",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "portfolio": "Portfolio"
+    },
+    "copyright": "Copyright © {year} ByteFlow – All rights reserved",
+    "builtBy": "Built by"
+  },
   "HomePage": {
     "title": "Welcome to ByteFlow",
-    "subtitle": "Building digital solutions that transform businesses",
+    "subtitle": "Custom software, from design to deploy",
     "Hero": {
-      "title": "Grow your business, master every move.",
-      "subtitle": "Helping businesses thrive with innovative digital strategies, creative solutions, and measurable outcomes.",
-      "bookCall": "Book a call",
-      "learnMore": "Learn more",
-      "successStories": "2k+ Success Stories",
-      "growthMission": "Your Growth, Our Mission",
-      "roiBoost": "ROI Boost"
+      "eyebrow": "software studio",
+      "title": "Custom software, from design to deploy.",
+      "subtitle": "We build websites, e-commerce, apps and systems with Next.js, React and Node.js — fast, scalable and ready to grow with your business.",
+      "bookCall": "Request a quote",
+      "learnMore": "See our work",
+      "successStories": "25+ projects completed",
+      "growthMission": "Performance in production",
+      "metric": "10x",
+      "roiBoost": "faster",
+      "imageAlt": "Developer working on a ByteFlow project",
+      "stackLabel": "Our stack",
+      "mockup": {
+        "futcustom": "FutCustom home page",
+        "futbuynow": "FutBuyNow home page",
+        "saoJoao": "São João Arcoverde app screen"
+      }
     },
     "Benefits": {
-      "title": "At ByteFlow, we deliver real results through high-converting marketing strategies designed to scale your business, attract the right audience, and maximize ROI with precision."
+      "title": "At ByteFlow, we turn ideas into real digital products — with <hl>clean code</hl>, <hl>scalable architecture</hl> and a focus on <hl>performance</hl>, from the first prototype to production deploy."
     },
     "WhyChooseUs": {
-      "title": "Why we're the right choice",
-      "subtitle": "We create impactful strategies, refine brand positioning, and drive real results through smart content and scalable campaigns.",
-      "cta": "Inside our process",
-      "growthDriven": {
-        "title": "Growth-Driven",
-        "subtitle": "KPI-focused for real growth."
-      },
-      "experience": "5+ Years of Experience",
+      "eyebrow": "why us",
+      "title": "Why we’re the right choice",
+      "subtitle": "We combine engineering, design and infrastructure to ship complete products — and we measure results in performance, not promises.",
       "stats": {
-        "successRate": { "value": "98%", "label": "Client Success Rate" },
-        "campaignsLaunched": { "value": "200+", "label": "Campaigns Launched" },
-        "revenueGenerated": { "value": "$250K+", "label": "Revenue Generated" }
+        "experienceYears": {
+          "value": "5+",
+          "label": "Years building software"
+        },
+        "projectsDelivered": {
+          "value": "25+",
+          "label": "Projects completed"
+        },
+        "fasterResponse": {
+          "value": "10x",
+          "label": "Faster sitemap at FutBuyNow"
+        }
+      },
+      "process": {
+        "title": "How we work",
+        "steps": {
+          "discovery": {
+            "title": "Discovery",
+            "description": "We learn the business, audience and goals to define scope, priorities and stack.",
+            "log": [
+              "$ byteflow discover",
+              "✓ goals and audience mapped",
+              "✓ scope and stack defined"
+            ]
+          },
+          "design": {
+            "title": "Design",
+            "description": "Flows and interfaces in Figma, validated before the first line of code.",
+            "log": [
+              "$ byteflow design --figma",
+              "✓ flows and screens validated",
+              "✓ prototype approved"
+            ]
+          },
+          "build": {
+            "title": "Development",
+            "description": "Short delivery cycles with typed, reviewed code and a staging environment.",
+            "log": [
+              "$ byteflow build",
+              "✓ typed, reviewed code",
+              "✓ staging is live"
+            ]
+          },
+          "deploy": {
+            "title": "Deploy & growth",
+            "description": "CI/CD, monitoring and continuous performance improvements after launch.",
+            "log": [
+              "$ byteflow deploy --prod",
+              "✓ CI/CD and monitoring",
+              "✓ live 🚀"
+            ]
+          }
+        }
+      },
+      "race": {
+        "title": "Sitemap response time",
+        "caption": "FutBuyNow · 1,000+ posts",
+        "before": "Before",
+        "after": "After"
       }
     },
     "HowItWorks": {
-      "title": "What we offer",
-      "subtitle": "Comprehensive solutions for business success.",
+      "eyebrow": "services",
+      "title": "What we do",
+      "subtitle": "From layout to infrastructure: complete solutions to get your product off the ground.",
       "services": {
-        "digitalMarketing": {
-          "title": "Digital Marketing",
-          "description": "Maximize online visibility with paid ads, social media, and strategic SEO to drive targeted traffic and higher conversions."
+        "web": {
+          "title": "Websites & Web Platforms",
+          "description": "Company sites, landing pages and platforms built with Next.js and React — fast, accessible and SEO-optimized."
         },
-        "businessConsulting": {
-          "title": "Business Consulting",
-          "description": "Enhance business strategy, optimize core processes, and leverage real-time analytics for sustainable growth."
+        "ecommerce": {
+          "title": "E-commerce & Payments",
+          "description": "Full stores with checkout, PIX and card payments via Stripe, shipping, admin panel and funnel analytics."
         },
-        "leadGeneration": {
-          "title": "Lead Generation",
-          "description": "Optimize advanced funnels, automate processes, and boost customer conversions to generate leads."
+        "mobile": {
+          "title": "Mobile Apps",
+          "description": "Apps focused on fast discovery, maps and notifications, designed for the mobile experience."
         },
-        "brandStrategy": {
-          "title": "Brand Strategy",
-          "description": "Building a powerful, data-driven brand identity that resonates, inspires, and drives long-term success."
+        "systems": {
+          "title": "Systems & Dashboards",
+          "description": "Internal systems with role-based access, management dashboards and Node.js APIs with Prisma and PostgreSQL."
         },
-        "contentWriting": {
-          "title": "Content Writing",
-          "description": "Crafting compelling, SEO-optimized content that boosts engagement, authority, and conversions."
+        "performance": {
+          "title": "Performance & Technical SEO",
+          "description": "Auditing and optimizing Core Web Vitals, sitemaps, internationalization and response times in production."
         },
-        "strategicPlanning": {
-          "title": "Strategic Planning",
-          "description": "Generate high-quality leads through targeted campaigns and optimized funnels for maximum conversions."
+        "devops": {
+          "title": "DevOps & Cloud",
+          "description": "Docker, GitHub Actions, Kubernetes and AWS/Cloudflare for automated, secure and scalable deploys."
+        },
+        "landing": {
+          "title": "Landing Pages & WordPress",
+          "description": "Sales pages and company websites in WordPress/Elementor, responsive and ready for campaigns and paid traffic."
+        },
+        "video": {
+          "title": "Video & Motion",
+          "description": "Video editing and motion graphics for brand promotion, social media and product presentations."
         }
       }
+    },
+    "Pricing": {
+      "eyebrow": "comparison",
+      "title": "Why ByteFlow stands out",
+      "subtitle": "See how ByteFlow delivers more clarity, technical quality and results compared to traditional development.",
+      "othersTitle": "Typical development",
+      "upreachTitle": "ByteFlow",
+      "upreachBadge": "ByteFlow",
+      "others": {
+        "generic": "Generic templates and hard-to-maintain code",
+        "vanity": "Slow sites with Core Web Vitals in the red",
+        "slow": "Slow communication and uncertain deadlines",
+        "minimal": "Delivery without documentation or post-launch support",
+        "outdated": "Outdated stack and manual deploys"
+      },
+      "upreach": {
+        "custom": "Architecture tailored to your business",
+        "kpis": "Measured performance: Core Web Vitals, technical SEO and response time",
+        "support": "Direct communication with the people building it",
+        "tools": "Modern stack: Next.js, TypeScript, Node.js and Docker",
+        "longTerm": "CI/CD, monitoring and continuous evolution"
+      }
+    },
+    "About": {
+      "eyebrow": "team",
+      "title": "Engineering, design and video — from the people doing the work.",
+      "intro": "ByteFlow is a lean team of full stack developers: the people you talk to are the ones who design, code and ship. Together we've completed more than 25 projects — from e-commerce and systems to landing pages and videos.",
+      "stackLabel": "Skills",
+      "ratingCount": "{count} reviews on {platform}",
+      "links": {
+        "email": "Talk to the team",
+        "portfolio": "Portfolio",
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "workana": "Workana profile"
+      },
+      "members": {
+        "gustavo": {
+          "role": "Founder & Fullstack Developer",
+          "photoAlt": "Gustavo Rodrigues, founder of ByteFlow",
+          "bio": "Fullstack developer with 4 years of experience building modern, scalable applications with React, Next.js, Node.js and the cloud. Leads architecture and product — from FutCustom's e-commerce to the ongoing evolution of FutBuyNow."
+        },
+        "edson": {
+          "role": "Full Stack Dev & Video Editor",
+          "photoAlt": "Edson Luis, full stack developer and video editor at ByteFlow",
+          "bio": "Full stack developer and video editor with 5 to 10 years of web development experience. Builds company websites, WordPress/Elementor sales pages and React/Next.js applications, plus videos and motion graphics for brand promotion."
+        }
+      }
+    },
+    "Faq": {
+      "eyebrow": "faq",
+      "title": "Your questions, answered.",
+      "subtitle": "Quick answers about how we work, our stack and how to start a project.",
+      "questions": {
+        "q1": {
+          "question": "What kind of projects does ByteFlow build?",
+          "answer": "Websites and landing pages (including WordPress), e-commerce, mobile apps, internal systems and dashboards — from interface design to deploy infrastructure. We also produce videos and motion graphics for promotion."
+        },
+        "q2": {
+          "question": "Which technologies do you use?",
+          "answer": "Mainly TypeScript, React, Next.js, Vue/Nuxt and Node.js, with Prisma and PostgreSQL on the back end, plus Docker, GitHub Actions, AWS and Cloudflare for infrastructure."
+        },
+        "q3": {
+          "question": "How long does a project take?",
+          "answer": "It depends on scope. Once we understand your needs, we send a proposal with defined stages, timeline and deliverables for each phase."
+        },
+        "q4": {
+          "question": "Do you maintain existing projects?",
+          "answer": "Yes. We take over ongoing projects to fix technical debt, improve performance and ship new features, as we did at FutBuyNow."
+        },
+        "q5": {
+          "question": "Do you work with agencies (white-label)?",
+          "answer": "Yes. We act as a partner development team for agencies, delivering the project under the agency’s brand to the end client."
+        },
+        "q6": {
+          "question": "How do I start a project with ByteFlow?",
+          "answer": "Send a message by email or LinkedIn describing your idea. We’ll set up a quick call and come back with scope, recommended stack and timeline."
+        }
+      }
+    },
+    "CtaBanner": {
+      "eyebrow": "contact",
+      "title": "Have a project in mind?",
+      "subtitle": "Tell us your idea and get a proposal with scope, timeline and the right stack for your business.",
+      "cta": "Get in touch"
+    },
+    "LeadCapture": {
+      "eyebrow": "work",
+      "title": "Projects we’ve delivered",
+      "subtitle": "A selection of real products — from e-commerce to educational platforms.",
+      "visitSite": "Visit site",
+      "viewCode": "Code",
+      "projects": {
+        "futbuynow": {
+          "title": "FutBuyNow",
+          "description": "Maintenance and evolution of a global FC coins marketplace: monorepo with API, dashboard and a store in 16 languages.",
+          "badges": [
+            "Sitemap 30s → 2.8s",
+            "CLS 0.47 → 0.1"
+          ]
+        },
+        "futcustom": {
+          "title": "FutCustom",
+          "description": "E-commerce for custom football cards with real-time customization, PIX, Stripe, shipping and full analytics.",
+          "badges": [
+            "PIX + Stripe",
+            "3 languages"
+          ]
+        },
+        "teflyclass": {
+          "title": "TeflyClass",
+          "description": "Academic management platform for ETEJCG, with role-based access for assignments, projects and announcements.",
+          "badges": [
+            "Academic management",
+            "Role-based access"
+          ]
+        },
+        "saoJoao": {
+          "title": "São João Arcoverde",
+          "description": "App for visitors of São João de Arcoverde: attractions, schedule, maps and last-minute alerts.",
+          "badges": [
+            "Mobile",
+            "Tourism"
+          ]
+        },
+        "ecommerceBook": {
+          "title": "Ecommerce Book",
+          "description": "Ebook store with smooth checkout, instant file delivery and per-user license management.",
+          "badges": [
+            "Digital e-commerce"
+          ]
+        },
+        "frontendNews": {
+          "title": "Frontend News",
+          "description": "Curated newsletter for frontend devs with React, Vue and Next.js updates in one place.",
+          "badges": [
+            "Newsletter"
+          ]
+        },
+        "biomedicina": {
+          "title": "Biomedicina em Ação",
+          "description": "Blog for an ETEJCG student event that took students’ articles beyond the school walls.",
+          "badges": [
+            "Blog",
+            "Education"
+          ]
+        },
+        "startupDesign": {
+          "title": "Startup Design",
+          "description": "High-impact interface template for tech companies, with expressive typography and strong hierarchy.",
+          "badges": [
+            "UI Design"
+          ]
+        }
+      },
+      "viewCase": "View case"
     },
     "Testimonials": {
       "title": "What Our Clients Say",
@@ -94,87 +349,136 @@
           "text": "Working with them was a game-changer for our studio. Their attention to detail and creative vision exceeded our expectations."
         }
       }
-    },
-    "Pricing": {
-      "title": "Why ByteFlow Stands Out",
-      "subtitle": "Here's how ByteFlow delivers more value, clarity, and results compared to typical service providers.",
-      "othersTitle": "Other Agencies",
-      "upreachTitle": "ByteFlow",
-      "upreachBadge": "ByteFlow",
-      "others": {
-        "generic": "Generic, one-size-fits-all strategies",
-        "vanity": "Focus on vanity metrics (likes, shares)",
-        "slow": "Slow response times and poor communication",
-        "minimal": "Minimal post-launch support or guidance",
-        "outdated": "Use outdated marketing techniques"
+    }
+  },
+  "Cases": {
+    "eyebrow": "case study",
+    "back": "All projects",
+    "stack": "Stack",
+    "highlights": "Highlights",
+    "visitSite": "Visit live site",
+    "viewCode": "View code",
+    "privateRepo": "Private code (client)",
+    "screensTitle": "App screens",
+    "moreTitle": "More projects",
+    "notFound": "Project not found",
+    "metaTitle": "{title} — ByteFlow case study",
+    "items": {
+      "futbuynow": {
+        "summary": "Ongoing maintenance and evolution of a global FC coins marketplace — performance, internal tooling and automated deploys.",
+        "sections": [
+          {
+            "label": "Context",
+            "text": "As a freelancer, I took over the ongoing maintenance and evolution of FutBuyNow, a marketplace for buying and selling FC coins aimed at players worldwide. The product already existed, but had piled up technical debt, performance bottlenecks and a lack of internal tools to analyze and manage the business."
+          },
+          {
+            "label": "Technical approach",
+            "text": "The work happens in a monorepo with three independent apps — a Node/Express API with Prisma, a React/Vite dashboard and a Next.js store in 16 languages via next-intl. The biggest challenges were optimizing the sitemap, which timed out in production, building dynamic bonus configuration in the admin panel, adding filters to the orders dashboard and integrating Stripe webhooks."
+          },
+          {
+            "label": "Results",
+            "text": "Measurable improvements: CLS dropped from 0.47 to 0.1 and the sitemap endpoint went from timing out to 2.8s in production, with over 1,000 posts. I also set up Docker and GitHub Actions for automated deploys to staging, and shipped dozens of features that made the platform easier to operate."
+          }
+        ]
       },
-      "upreach": {
-        "custom": "Custom strategies tailored to your business goals",
-        "kpis": "Focus on real KPIs like leads, conversions, and ROI",
-        "support": "Transparent communication and dedicated support",
-        "tools": "Use the latest tools and data-driven marketing tactics",
-        "longTerm": "Provide long-term support and optimization"
-      }
-    },
-    "Faq": {
-      "title": "Your questions, answered.",
-      "subtitle": "Find quick answers to common queries about our services, process, and how we can help you achieve your goals.",
-      "questions": {
-        "q1": {
-          "question": "How does your marketing approach stand out from competitors?",
-          "answer": "We focus on data-driven strategies and real KPIs rather than vanity metrics. Our approach is tailored to your specific business goals and audience, ensuring maximum ROI."
-        },
-        "q2": {
-          "question": "What makes your lead generation strategies effective?",
-          "answer": "Our lead generation combines advanced funnel optimization with targeted content marketing, ensuring that we not only attract traffic but convert it into high-quality leads."
-        },
-        "q3": {
-          "question": "How do you accurately measure the success of a campaign?",
-          "answer": "We use a variety of analytics tools to track conversions, cost per lead, and overall revenue growth. You'll receive transparent reports that show exactly how your investment is performing."
-        },
-        "q4": {
-          "question": "How can I easily get started with your services today?",
-          "answer": "Simply fill out our contact form or book a consultation call. We'll discuss your goals and create a custom plan to help your business scale confidently."
-        },
-        "q5": {
-          "question": "What platforms do you specialize in for digital marketing?",
-          "answer": "We specialize in a wide range of platforms including Google Ads, Meta Ads (Facebook/Instagram), LinkedIn, and various SEO tools to ensure your brand is visible where your customers are."
-        },
-        "q6": {
-          "question": "Do you offer tailored solutions for different industries?",
-          "answer": "Yes, we have experience working with diverse industries from Tech and Real Estate to Fitness and Fashion. We adapt our strategies to meet the unique challenges of your sector."
-        }
-      }
-    },
-    "CtaBanner": {
-      "title": "Ready to elevate your brand and unlock new growth?",
-      "subtitle": "With years of experience, we've helped businesses generate millions. Partner with us to scale confidently.",
-      "cta": "Get started"
-    },
-    "LeadCapture": {
-      "title": "Success You Can See",
-      "subtitle": "A glimpse into our most impactful projects and success stories.",
-      "projects": {
-        "growth360": {
-          "title": "Growth360 Agency",
-          "description": "Increased sales through influencer marketing and targeted social ads.",
-          "badges": ["85% Revenue Growth", "70% Organic Traffic Growth"]
-        },
-        "pureglow": {
-          "title": "PureGlow Skincare",
-          "description": "Boosted brand trust with content marketing and targeted ads.",
-          "badges": ["75% Revenue Growth", "65% Organic Traffic Growth"]
-        },
-        "urbanfit": {
-          "title": "UrbanFit Gym",
-          "description": "Increased sign-ups through engaging digital campaigns and targeted promotions.",
-          "badges": ["88% Revenue Growth", "75% Organic Traffic Growth"]
-        },
-        "chronolux": {
-          "title": "ChronoLux",
-          "description": "Implemented a data-driven SEO and PPC strategy, boosting online visibility.",
-          "badges": ["75% Revenue Growth", "70% Organic Traffic Growth"]
-        }
+      "futcustom": {
+        "summary": "A complete e-commerce for fans to order custom football cards — from real-time customization to after-sales.",
+        "sections": [
+          {
+            "label": "Context",
+            "text": "A client needed a platform where fans could order FIFA-style custom football cards with their name, photo and team. The challenge was turning a visual customization flow into a smooth buying experience, with both physical and digital delivery."
+          },
+          {
+            "label": "Stack & decisions",
+            "text": "The app was built with the Next.js App Router, TypeScript, Prisma and PostgreSQL. Zustand handles real-time customization state and RTK Query handles API calls. Checkout supports PIX and cards (Stripe), shipping is calculated with Melhor Envio, the UI ships in three languages with next-intl, and the funnel is tracked end to end with GTM/GA4 and server-side GTM."
+          },
+          {
+            "label": "Delivery",
+            "text": "The product was delivered complete — from authentication to after-sales — including an admin panel, a checkout with multiple payment and delivery methods, and the full analytics setup. Architecture decisions were made end to end, from database modeling to the purchase-flow UX."
+          }
+        ]
+      },
+      "teflyclass": {
+        "summary": "Academic management platform for ETEJCG, centralizing assignments, projects and announcements with role-based access.",
+        "sections": [
+          {
+            "label": "Context",
+            "text": "ETEJCG had no central platform for academic management. Class representatives and students relied on informal group chats to share assignments, projects and announcements, which made information messy and hard to track."
+          },
+          {
+            "label": "Solution",
+            "text": "I built a system with role-based access control, where class representatives and authorized students publish assignments, projects and announcements in a structured way, keeping that responsibility inside the platform."
+          },
+          {
+            "label": "Results",
+            "text": "The platform now organizes the school's academic flow, reducing reliance on informal channels and giving students and representatives more visibility and control over each class's tasks."
+          }
+        ]
+      },
+      "saoJoao": {
+        "summary": "An app for visitors of São João de Arcoverde — attractions, schedule and logistics in your pocket.",
+        "sections": [
+          {
+            "label": "Overview",
+            "text": "A mobile platform for São João de Arcoverde visitors: a directory of attractions, a day-by-day schedule and logistics information for tourists."
+          },
+          {
+            "label": "Experience",
+            "text": "The interface was designed for quick discovery during the festival — date filters, cards for each stage's shows, maps and room for last-minute notifications."
+          }
+        ]
+      },
+      "ecommerceBook": {
+        "summary": "An ebook store with smooth checkout, instant file delivery and per-user licenses.",
+        "sections": [
+          {
+            "label": "Overview",
+            "text": "A platform for buying and selling digital ebooks, focused on a simple purchase experience and instant file delivery after payment."
+          },
+          {
+            "label": "Challenges",
+            "text": "The project explored UX for digital-product e-commerce, payment integration and per-user license management, making sure each buyer only accesses what they purchased."
+          }
+        ]
+      },
+      "frontendNews": {
+        "summary": "A curated newsletter for frontend developers, with ecosystem news in one place.",
+        "sections": [
+          {
+            "label": "Overview",
+            "text": "A newsletter platform for frontend developers that gathers relevant updates from libraries such as React, Vue and Next.js."
+          },
+          {
+            "label": "Goal",
+            "text": "Create a curated channel that saves time for people who follow the ecosystem closely and don't want to miss anything important."
+          }
+        ]
+      },
+      "biomedicina": {
+        "summary": "A blog for an ETEJCG student event that took students' articles beyond the school walls.",
+        "sections": [
+          {
+            "label": "Overview",
+            "text": "One of the first React projects, built for a student event at ETEJCG: a blog that brought together the biomedicine articles written by students."
+          },
+          {
+            "label": "Impact",
+            "text": "The school got its own digital platform that made the content accessible to anyone — and the project was a great foundation for React component structure and content management."
+          }
+        ]
+      },
+      "startupDesign": {
+        "summary": "A high-impact interface template for tech companies.",
+        "sections": [
+          {
+            "label": "Overview",
+            "text": "An interface template for tech companies exploring expressive typography, strong visual hierarchy and a palette that communicates innovation."
+          },
+          {
+            "label": "Use",
+            "text": "It serves as a design reference for startups that want a distinctive, memorable digital presence, ready to be adapted to each client's brand."
+          }
+        ]
       }
     }
   }

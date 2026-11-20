@@ -1,95 +1,154 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
+import { Button, Logo } from "@/shared/ui";
+import { useLocalePaths } from "@/shared/config/i18n/paths";
+import { Magnetic, useMotion } from "@/shared/motion";
+import { gsap, ScrollTrigger, useGSAP } from "@/shared/motion/gsap";
+import { LocaleSwitcher } from "./LocaleSwitcher";
 
-const navLinks = [
-  { label: "Serviços", href: "#services" },
-  { label: "Trabalhos", href: "#work" },
-  { label: "Depoimentos", href: "#testimonials" },
-  { label: "Sobre", href: "#about" },
-  { label: "Blog", href: "#blog" },
-];
+const navLinks = [{ key: "services" }, { key: "work" }, { key: "about" }, { key: "faq" }] as const;
+
+type NavKey = (typeof navLinks)[number]["key"];
 
 export const Header = () => {
+  const t = useTranslations("Header");
+  const paths = useLocalePaths();
+  const { reduced } = useMotion();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState<NavKey | null>(null);
+  const [pill, setPill] = useState<{ left: number; width: number } | null>(null);
+
+  const headerRef = useRef<HTMLElement>(null);
+  const navRef = useRef<HTMLElement>(null);
+  const linkRefs = useRef<Partial<Record<NavKey, HTMLAnchorElement | null>>>({});
+  const menuOpenRef = useRef(menuOpen);
+  menuOpenRef.current = menuOpen;
+
+  /* Esconde ao rolar para baixo, reaparece ao subir */
+  useGSAP(
+    () => {
+      const header = headerRef.current;
+      if (!header || reduced) return;
+      let hidden = false;
+      ScrollTrigger.create({
+        start: 0,
+        end: "max",
+        onUpdate(self) {
+          const shouldHide = !menuOpenRef.current && self.scroll() > 160 && self.direction === 1;
+          if (shouldHide === hidden) return;
+          hidden = shouldHide;
+          gsap.to(header, { yPercent: hidden ? -100 : 0, duration: 0.45, ease: "power3.out", overwrite: true });
+        },
+      });
+    },
+    { dependencies: [reduced], revertOnUpdate: true },
+  );
+
+  /* Seção visível → link ativo */
+  useEffect(() => {
+    const sections = navLinks
+      .map(({ key }) => document.getElementById(key))
+      .filter((el): el is HTMLElement => Boolean(el));
+    if (!sections.length) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting);
+        if (visible.length) setActive(visible[0].target.id as NavKey);
+        else if (window.scrollY < window.innerHeight * 0.6) setActive(null);
+      },
+      { rootMargin: "-45% 0px -50% 0px" },
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
+
+  /* Posição da pílula sob o link ativo (desktop) */
+  useEffect(() => {
+    const update = () => {
+      const link = active ? linkRefs.current[active] : null;
+      const nav = navRef.current;
+      if (!link || !nav || window.innerWidth < 1100) return setPill(null);
+      const l = link.getBoundingClientRect();
+      const n = nav.getBoundingClientRect();
+      setPill({ left: l.left - n.left, width: l.width });
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, [active]);
 
   return (
-    <header className="bg-dark px-6 md:px-[60px] py-[12px] w-full box-border relative z-[1000]">
+    <header
+      ref={headerRef}
+      className="sticky top-0 bg-ink/90 backdrop-blur-md border-b border-white/10 px-6 md:px-[60px] py-[12px] w-full box-border z-[1000]"
+    >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
-        <a href="/" className="flex items-center gap-[8px] no-underline shrink-0">
-          <svg
-            width="22"
-            height="22"
-            viewBox="0 0 22 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-[22px] h-[22px] shrink-0"
-          >
-            <g clipPath="url(#clip0_header)">
-              <path
-                d="M22 9.253C22 8.241 21.179 7.42 20.167 7.42H14.546V1.833C14.546 0.821 13.725 0 12.713 0H9.236C8.223 0 7.426 0.833 7.179 1.815C6.518 4.454 4.447 6.531 1.815 7.195C0.833 7.443 0 8.241 0 9.253V12.747C0 13.759 0.821 14.58 1.833 14.58H7.402V20.167C7.402 21.179 8.223 22 9.236 22H12.713C13.725 22 14.523 21.166 14.772 20.185C15.443 17.545 17.542 15.468 20.185 14.804C21.167 14.557 22 13.759 22 12.747V9.253Z"
-                fill="white"
-                fillOpacity="0.75"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_header">
-                <rect width="22" height="22" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-          <span className="text-white/75 font-bold text-[18px] md:text-[21px] leading-[1.46]">
-            ByteFlow
-          </span>
-        </a>
+        <Logo href={paths.home()} />
 
         <nav
+          ref={navRef}
           className={`
           flex items-center
-          absolute top-full left-0 right-0 bg-dark flex-col items-start gap-0 overflow-hidden transition-all duration-300 px-6 z-[100]
-          lg:static lg:flex-row lg:items-center lg:gap-[44px] lg:px-0 lg:max-h-none lg:py-0 lg:overflow-visible
+          absolute top-full left-0 right-0 bg-ink flex-col items-start gap-0 overflow-hidden transition-all duration-300 px-6 z-[100]
+          lg:relative lg:inset-auto lg:bg-transparent lg:flex-row lg:items-center lg:gap-[12px] lg:px-0 lg:max-h-none lg:py-0 lg:overflow-visible
           ${menuOpen ? "max-h-[400px] py-[16px] pb-[24px] gap-[20px]" : "max-h-0 py-0"}
         `}
         >
+          {/* pílula que desliza até a seção ativa */}
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute top-1/2 hidden h-[34px] -translate-y-1/2 rounded-full border border-white/10 bg-white/[0.08] transition-[left,width,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:block"
+            style={{ left: pill?.left ?? 0, width: pill?.width ?? 0, opacity: pill ? 1 : 0 }}
+          />
           {navLinks.map((link) => (
             <a
-              key={link.label}
-              href={link.href}
-              className="text-white/75 text-[14px] font-normal leading-[25.6px] no-underline whitespace-nowrap transition-colors duration-200 hover:text-white"
+              key={link.key}
+              ref={(el) => {
+                linkRefs.current[link.key] = el;
+              }}
+              href={paths.home(link.key)}
+              onClick={() => setMenuOpen(false)}
+              aria-current={active === link.key ? "location" : undefined}
+              className={`relative text-[14px] font-normal leading-[25.6px] no-underline whitespace-nowrap transition-colors duration-200 hover:text-white lg:px-4 lg:py-1 ${
+                active === link.key ? "text-white" : "text-white/75"
+              }`}
             >
-              {link.label}
+              {t(`nav.${link.key}`)}
             </a>
           ))}
-          <a
-            href="#contact"
-            className="lg:hidden inline-flex items-center justify-center py-[9px] pb-[10px] px-[28px] rounded-full bg-primary text-[#0d0d0d] text-[17px] font-medium leading-[25.2px] no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-hover mt-[4px]"
-          >
-            Fale Conosco
-          </a>
+          <Button href={paths.home("contact")} className="lg:hidden mt-[4px]" onClick={() => setMenuOpen(false)}>
+            {t("cta")}
+          </Button>
         </nav>
 
-        <a
-          href="#contact"
-          className="hidden lg:inline-flex items-center justify-center py-[9px] pb-[10px] px-[28px] rounded-full bg-primary text-[#0d0d0d] text-[17px] font-medium leading-[25.2px] no-underline whitespace-nowrap transition-colors duration-200 hover:bg-primary-hover shrink-0"
-        >
-          Fale Conosco
-        </a>
+        <div className="flex shrink-0 items-center gap-3 lg:gap-4">
+          <LocaleSwitcher />
 
-        <button
-          className="flex lg:hidden flex-col gap-[5px] bg-none border-none cursor-pointer p-[4px]"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span
-            className={`block w-[24px] h-[2px] bg-white/75 rounded-sm transition-all duration-300 ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`}
-          />
-          <span
-            className={`block w-[24px] h-[2px] bg-white/75 rounded-sm transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`block w-[24px] h-[2px] bg-white/75 rounded-sm transition-all duration-300 ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
-          />
-        </button>
+          <div className="hidden lg:block">
+            <Magnetic strength={0.25}>
+              <Button href={paths.home("contact")}>{t("cta")}</Button>
+            </Magnetic>
+          </div>
+
+          <button
+            className="flex lg:hidden flex-col gap-[5px] bg-none border-none cursor-pointer p-[4px]"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={t("menu")}
+            aria-expanded={menuOpen}
+          >
+            <span
+              className={`block w-[24px] h-[2px] bg-white/75 rounded-sm transition-all duration-300 ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`}
+            />
+            <span
+              className={`block w-[24px] h-[2px] bg-white/75 rounded-sm transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block w-[24px] h-[2px] bg-white/75 rounded-sm transition-all duration-300 ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
+            />
+          </button>
+        </div>
       </div>
     </header>
   );

@@ -1,70 +1,61 @@
 "use client";
 
-import { Send } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { ArrowUpRight, Mail } from "lucide-react";
+import { CONTACT } from "@/shared/config/contact";
+import { Logo } from "@/shared/ui";
+import { useLocalePaths } from "@/shared/config/i18n/paths";
+
+const SECTION_LINKS = [
+  { key: "services" },
+  { key: "work" },
+  { key: "about" },
+] as const;
+
+const SOCIAL_LINKS = [
+  { key: "github", href: CONTACT.github },
+  { key: "linkedin", href: CONTACT.linkedin },
+  { key: "portfolio", href: CONTACT.portfolio },
+] as const;
 
 export const Footer = () => {
+  const t = useTranslations("Footer");
+  const paths = useLocalePaths();
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="relative w-full overflow-hidden bg-[#002329] px-6 pt-24 pb-8 md:px-[60px] flex justify-center border-t border-white/10">
+    <footer className="relative w-full overflow-hidden bg-ink px-6 pt-24 pb-8 md:px-[60px] flex justify-center border-t border-white/10">
       <div className="w-full max-w-[1200px] flex flex-col gap-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
           <div className="lg:col-span-6 flex flex-col gap-10">
-            <a href="/" className="flex items-center gap-2 no-underline">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 22 22"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M22 9.253C22 8.241 21.179 7.42 20.167 7.42H14.546V1.833C14.546 0.821 13.725 0 12.713 0H9.236C8.223 0 7.426 0.833 7.179 1.815C6.518 4.454 4.447 6.531 1.815 7.195C0.833 7.443 0 8.241 0 9.253V12.747C0 13.759 0.821 14.58 1.833 14.58H7.402V20.167C7.402 21.179 8.223 22 9.236 22H12.713C13.725 22 14.523 21.166 14.772 20.185C15.443 17.545 17.542 15.468 20.185 14.804C21.167 14.557 22 13.759 22 12.747V9.253Z"
-                  fill="#50c878"
-                />
-              </svg>
-              <span className="text-white font-bold text-[21px]">ByteFlow</span>
-            </a>
+            <Logo href={paths.home()} className="w-fit" />
 
             <div className="flex flex-col gap-6 max-w-[450px]">
               <div className="flex flex-col gap-3">
-                <h4 className="text-[18px] font-bold text-white">Fique Conectado</h4>
-                <p className="text-[15px] leading-[1.6] text-white/60 font-medium">
-                  Assine nossa newsletter e receba insights, tendências e estratégias
-                  de marketing para escalar seu negócio.
-                </p>
+                <h4 className="font-display text-[18px] font-bold text-white">{t("contactTitle")}</h4>
+                <p className="text-[15px] leading-[1.6] text-white/60 font-medium">{t("contactText")}</p>
               </div>
 
-              <form className="flex gap-2 p-1 bg-white/[0.07] rounded-full border border-white/10">
-                <input
-                  type="email"
-                  placeholder="Seu e-mail"
-                  className="bg-transparent border-none outline-none px-6 py-2 flex-1 text-[15px] text-white placeholder:text-white/30"
-                />
-                <button
-                  type="submit"
-                  className="bg-[#50c878] text-[#0d0d0d] p-3 rounded-full hover:bg-[#50c878]/80 transition-colors"
-                  aria-label="Subscribe"
-                >
-                  <Send size={18} />
-                </button>
-              </form>
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="inline-flex w-fit items-center gap-3 rounded-full border border-white/10 bg-white/[0.07] py-1 pl-1 pr-6 text-[15px] text-white transition-colors hover:bg-white/[0.12]"
+              >
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-fg">
+                  <Mail size={18} />
+                </span>
+                {CONTACT.email}
+              </a>
             </div>
           </div>
 
           <div className="lg:col-span-6 grid grid-cols-2 md:grid-cols-3 gap-8">
             <div className="flex flex-col gap-6">
-              <h5 className="text-[16px] font-bold text-white">Seções</h5>
+              <h5 className="font-mono text-[12.5px] uppercase tracking-[0.14em] text-primary">{t("sectionsTitle")}</h5>
               <ul className="flex flex-col gap-4 list-none p-0 m-0">
-                {[
-                  { href: "#services", label: "Serviços" },
-                  { href: "#work", label: "Trabalhos" },
-                  { href: "#testimonials", label: "Depoimentos" },
-                ].map(({ href, label }) => (
-                  <li key={href}>
-                    <a
-                      href={href}
-                      className="text-[15px] text-white/50 font-medium hover:text-white transition-colors"
-                    >
-                      {label}
+                {SECTION_LINKS.map(({ key }) => (
+                  <li key={key}>
+                    <a href={paths.home(key)} className="text-[15px] text-white/50 font-medium hover:text-white transition-colors">
+                      {t(`links.${key}`)}
                     </a>
                   </li>
                 ))}
@@ -72,19 +63,33 @@ export const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-6">
-              <h5 className="text-[16px] font-bold text-white">Informações</h5>
+              <h5 className="font-mono text-[12.5px] uppercase tracking-[0.14em] text-primary">{t("infoTitle")}</h5>
               <ul className="flex flex-col gap-4 list-none p-0 m-0">
-                {[
-                  { href: "#faq", label: "FAQ" },
-                  { href: "/404", label: "404" },
-                  { href: "#contact", label: "Contato" },
-                ].map(({ href, label }) => (
-                  <li key={href}>
+                <li>
+                  <a href={paths.home("faq")} className="text-[15px] text-white/50 font-medium hover:text-white transition-colors">
+                    {t("links.faq")}
+                  </a>
+                </li>
+                <li>
+                  <a href={paths.home("contact")} className="text-[15px] text-white/50 font-medium hover:text-white transition-colors">
+                    {t("links.contact")}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-6">
+              <h5 className="font-mono text-[12.5px] uppercase tracking-[0.14em] text-primary">{t("socialTitle")}</h5>
+              <ul className="flex flex-col gap-4 list-none p-0 m-0">
+                {SOCIAL_LINKS.map(({ key, href }) => (
+                  <li key={key}>
                     <a
                       href={href}
-                      className="text-[15px] text-white/50 font-medium hover:text-white transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-[15px] text-white/50 font-medium hover:text-white transition-colors"
                     >
-                      {label}
+                      {t(`links.${key}`)} <ArrowUpRight size={14} />
                     </a>
                   </li>
                 ))}
@@ -94,10 +99,13 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-[14px] text-white/30 font-medium">{t("copyright", { year })}</p>
           <p className="text-[14px] text-white/30 font-medium">
-            Copyright © 2024 – Todos os direitos reservados
+            {t("builtBy")}{" "}
+            <a href={CONTACT.portfolio} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
+              {CONTACT.founder}
+            </a>
           </p>
-          <p className="text-[14px] text-white/30 font-medium">Criado por Khurram</p>
         </div>
       </div>
     </footer>
